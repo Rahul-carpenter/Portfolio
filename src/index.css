@@ -1,13 +1,60 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* .urbanist-<uniquifier> {
+    font-family: "Urbanist", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+  } */
+
+/*
+
+.jost-<uniquifier> {
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+/* Globel CSS */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Urbanist", sans-serif;
+  user-select: none;
+}
+.Logo {
+  font-family: "jost", sans-serif;
+}
+.Secheading {
+  font-family: "Urbanist" sans-serif !important;
+}
+/* CSS for Hero.jsx */
+
+.brust {
+  background: #fff;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  text-align: center;
+}
+.brust:before,
+.brust:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 40px;
+  background: #fff;
+}
+.brust:before {
+  transform: rotate(30deg);
+}
+.brust:after {
+  transform: rotate(60deg);
 }
