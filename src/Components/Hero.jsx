@@ -20,16 +20,25 @@ const Hero = () => {
               style={{
                 transform: isInView ? "none" : "translateY(-100%)",
                 opacity: isInView ? 1 : 0,
-                transition:
-                  "all 0.5    s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s",
+                transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
               }}
-              className="Logo text-green-500  relative"
+              className="Logo text-blue-500  relative"
             >
               .dev
             </motion.span>
           </div>
         </div>
-        <div className="w-full h-[80%] flex md:block items-center">
+        <div
+          id="bgBlack"
+          className="w-full h-[80%] flex md:block items-center relative"
+        >
+          <div className="absolute  left-1/2 transform -translate-x-1/2 top-14  md:top-5">
+            <img
+              src="./img/blackbg.png"
+              alt=""
+              className="w-auto max-w-[500px] h-auto max-h-[500px] opacity-30"
+            />
+          </div>
           <div className="w-full flex justify-center pt-[50px] sm:pt-10 md:pt-20  py-5">
             <div className="w-[90%] md:w-[80%] lg:w-[60%]  flex flex-col  items-center gap-5 ">
               <motion.div
@@ -54,17 +63,25 @@ const Hero = () => {
                   <div className="font-extrabold ">
                     <motion.span
                       ref={ref}
-                      className="duration-[0.3s] relative"
-                      initial={{ left: "-300px" }}
-                      animate={{ left: isInView ? "-5px" : "-300px" }}
+                      className="relative duration-300"
+                      style={{
+                        left: isInView ? "-5px" : "200%",
+                        opacity: isInView ? 1 : 0,
+                        transition:
+                          "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
+                      }}
                     >
                       Manish
                     </motion.span>
                     <motion.span
                       ref={ref}
-                      className="duration-[0.3s] relative"
-                      initial={{ right: "-300px" }}
-                      animate={{ right: isInView ? "-5px" : "-300px" }}
+                      className="relative duration-300 "
+                      style={{
+                        right: isInView ? "-5px" : "200%",
+                        opacity: isInView ? 1 : 0,
+                        transition:
+                          "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
+                      }}
                     >
                       Meena
                     </motion.span>
@@ -85,14 +102,14 @@ const Hero = () => {
                   typeSpeed={30}
                   cursorStyle="_"
                   words={[
-                    "Hello, Im Manish from India. I am a full-stack web developer, I create simple, responsive, fast and user-friendly Websites, Portfolio, and Web Apps. ",
+                    "Hello, I'm Manish from India. I am a Full-Stack Web Developer with a core focus on User Interface, I create simple, responsive, fast and user-friendly Websites, Portfolio, and Web Apps. ",
                   ]}
                 />
               </motion.div>
               <div className="text-sm sm:text-lg lg:text-xl pt-5">
                 <a
                   href="mailto:manishdev2k02@gmail.com"
-                  className=" bg-green-600 hover:bg-green-700 z-[2] shadow-lg px-5 py-2 rounded-full text-white "
+                  className=" bg-blue-500 hover:bg-blue-600 z-[2] shadow-lg px-5 py-2 rounded-full text-white "
                 >
                   Reach out
                 </a>

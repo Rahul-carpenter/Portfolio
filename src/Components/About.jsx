@@ -1,27 +1,40 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 const About = () => {
+  const ref = useRef(null);
   const Eduref = useRef(null);
   const Expref = useRef(null);
   const Sumref = useRef(null);
+  const Perref = useRef(null);
   const Lanref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   const isEduInView = useInView(Eduref, { once: true });
   const isExpInView = useInView(Expref, { once: true });
   const isSumInView = useInView(Sumref, { once: true });
+  const isPerInView = useInView(Perref, { once: true });
   const isLanInView = useInView(Lanref, { once: true });
 
   return (
     <section
       id="about"
-      className="w-screen h-max py-10 md:min-h-screen bg-slate-900 pt-5"
+      className="w-screen h-max py-10 sm:py-20 md:min-h-screen bg-gradient-to-b from-slate-900 via-slate-950 bg-slate-950"
     >
       <div className="w-full md:w-[90%]  mx-auto md:p-5">
-        <div className="flex justify-center lg:justify-normal ">
-          <motion.div className="Secheading w-max  text-xl sm:text-3xl md:text-4xl text-white font-semibold py-2 px-8 border-[3px] border-[#31ff42] rounded-tl-[20px] rounded-br-[20px] bg-slate-800 duration-300">
+        <div className="flex justify-center lg:justify-normal pb-0 sm:pb-10">
+          <motion.div
+            id="aboutH"
+            ref={ref}
+            style={{
+              transform: isInView ? "Scale(1)" : "Scale(0)",
+              opacity: isInView ? 1 : 0,
+              transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
+            }}
+            className=" w-max text-xl sm:text-3xl md:text-4xl text-blue-500 font-semibold py-2 px-8 border-l-[3px] border-r-[3px] lg:border-r-0  bg-slate-800   "
+          >
             About Me
           </motion.div>
         </div>
-        <div className=" grid grid-cols-4 gap-3 px-5 py-10">
+        <div className=" grid grid-cols-4 gap-6 sm:gap-3 px-5 py-10">
           <motion.div
             ref={Eduref}
             style={{
@@ -29,12 +42,12 @@ const About = () => {
               opacity: isEduInView ? 1 : 0,
               transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
             }}
-            className="col-span-4 lg:col-span-2 border-2 border-[#31ff42] rounded-lg flex flex-col gap-1 sm:gap-2 lg:gap-3 p-2 sm:p-5 duration-300"
+            className="col-span-4 lg:col-span-2 border-2 border-[#fff] rounded-lg flex flex-col gap-1 sm:gap-2 lg:gap-3 p-2 sm:p-5 duration-300"
           >
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#c1c1c1] pb-5 md:pb-0 text-center sm:text-left">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#c1c1c1] pb-5 md:pb-4 text-center sm:text-left ">
               Education
             </h1>
-            <h3 className=" text-sm sm:text-lg text-white text-center sm:text-left">
+            <h3 className=" text-sm sm:text-[16px] text-white text-center sm:text-left">
               July 2024 - Ongoing
             </h3>
             <h2 className="text-blue-400 text-lg sm:text-xl lg:text-xl font-semibold  text-center sm:text-left">
@@ -51,7 +64,7 @@ const About = () => {
               opacity: isExpInView ? 1 : 0,
               transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
             }}
-            className="col-span-4 lg:col-span-2 border-2 border-[#31ff42] rounded-lg flex flex-col gap-2 sm:gap-3 lg:gap-4 p-2 sm:p-5 duration-75"
+            className="col-span-4 lg:col-span-2 border-2 border-[#fff] rounded-lg flex flex-col gap-2 sm:gap-3 lg:gap-4 p-2 sm:p-5 duration-75"
           >
             <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#c1c1c1] text-center sm:text-left pb-5 md:pb-0">
               Experience
@@ -91,7 +104,7 @@ const About = () => {
               opacity: isSumInView ? 1 : 0,
               transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
             }}
-            className="col-span-4 lg:col-span-2 border-2 border-[#31ff42] rounded-lg flex flex-col gap-2 sm:gap-3 lg:gap-4 p-2 sm:p-5 duration-300"
+            className="col-span-4 lg:col-span-2 border-2 border-[#fff] rounded-lg flex flex-col gap-2 sm:gap-3 lg:gap-4 p-2 sm:p-5 duration-300"
           >
             <h1 className="text-3xl lg:text-2xl font-bold text-[#c1c1c1]  text-center sm:text-left">
               Summary
@@ -105,7 +118,15 @@ const About = () => {
               additional experience in Node.js, Express.js, and MongoDB.
             </p>
           </motion.div>
-          <motion.div className="col-span-4 sm:col-span-2 lg:col-span-1 border-2 border-[#31ff42] rounded-lg flex flex-col gap-2 sm:gap-3 lg:gap-4  py-2 px-5 sm:p-5">
+          <motion.div
+            ref={Perref}
+            style={{
+              transform: isPerInView ? "none" : "translateX(-100%)",
+              opacity: isPerInView ? 1 : 0,
+              transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+            }}
+            className="col-span-4 sm:col-span-2 lg:col-span-1 border-2 border-[#fff] rounded-lg flex flex-col gap-2 sm:gap-3 lg:gap-4  py-2 px-5 sm:p-5 duration-300"
+          >
             <h1 className="text-lg sm:text-xl lg:text-2xl font-bold text-[#c1c1c1] ">
               Persional Skills
             </h1>
@@ -123,7 +144,7 @@ const About = () => {
               opacity: isLanInView ? 1 : 0,
               transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
             }}
-            className="col-span-4 sm:col-span-2 lg:col-span-1 border-2 border-[#31ff42] rounded-lg flex flex-col gap-2 sm:gap-3 lg:gap-4  py-2 px-5 sm:p-5 sm:duration-300"
+            className="col-span-4 sm:col-span-2 lg:col-span-1 border-2 border-[#fff] rounded-lg flex flex-col gap-2 sm:gap-3 lg:gap-4  py-2 px-5 sm:p-5 sm:duration-300"
           >
             <h1 className="text-lg sm:text-xl lg:text-2xl font-bold text-[#c1c1c1] ">
               Languages
