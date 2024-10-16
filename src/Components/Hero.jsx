@@ -30,16 +30,16 @@ const Hero = () => {
         </div>
         <div
           id="bgBlack"
-          className="w-full h-[80%] flex md:block items-center relative"
+          className="w-full h-[80%] flex min-[1025px]:block items-center  "
         >
-          <div className="absolute  left-1/2 transform -translate-x-1/2 top-14  md:top-5">
-            <img
-              src="./img/blackbg.png"
-              alt=""
-              className="w-auto max-w-[500px] h-auto max-h-[500px] opacity-30"
-            />
-          </div>
-          <div className="w-full flex justify-center pt-[50px] sm:pt-10 md:pt-20  py-5">
+          <div className="w-full flex justify-center pt-[50px] sm:pt-10 md:pt-20 py-5 relative">
+            <div className="absolute  left-1/2 transform -translate-x-1/2 top-0  md:top-5">
+              <img
+                src="./img/blackbg.png"
+                alt=""
+                className="w-auto max-w-[500px] h-auto max-h-[500px] opacity-30"
+              />
+            </div>
             <div className="w-[90%] md:w-[80%] lg:w-[60%]  flex flex-col  items-center gap-5 ">
               <motion.div
                 initial="initial"
@@ -109,7 +109,7 @@ const Hero = () => {
               <div className="text-sm sm:text-lg lg:text-xl pt-5">
                 <a
                   href="mailto:manishdev2k02@gmail.com"
-                  className=" bg-blue-500 hover:bg-blue-600 z-[2] shadow-lg px-5 py-2 rounded-full text-white "
+                  className=" bg-blue-400 hover:bg-blue-600  shadow-lg px-5 py-2 rounded-full text-white "
                 >
                   Reach out
                 </a>

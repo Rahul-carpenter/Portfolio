@@ -2,7 +2,7 @@ import React from "react";
 import Hero from "./Hero";
 import About from "./About";
 import Skills from "./Skills";
-// import Project from "./Project";
+import Project from "./Project";
 // import Blog from "./Blog";
 // import Contact from "./Hero";
 
@@ -12,6 +12,7 @@ const Landing = () => {
       <Hero />
       <About />
       <Skills />
+      <Project />
     </div>
   );
 };
