@@ -30,7 +30,9 @@
 .Logo {
   font-family: "jost", sans-serif;
 }
-#aboutH {
+#aboutH,
+#skillH,
+#projectH {
   font-family: "jost", sans-serif !important;
   border: 2px slolid white;
 }
