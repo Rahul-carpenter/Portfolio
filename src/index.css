@@ -32,7 +32,8 @@
 }
 #aboutH,
 #skillH,
-#projectH {
+#projectH,
+#blogH {
   font-family: "jost", sans-serif !important;
   border: 2px slolid white;
 }
