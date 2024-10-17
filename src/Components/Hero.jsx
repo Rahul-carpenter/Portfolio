@@ -106,13 +106,13 @@ const Hero = () => {
                   ]}
                 />
               </motion.div>
-              <div className="text-sm sm:text-lg lg:text-xl pt-5">
-                <a
-                  href="mailto:manishdev2k02@gmail.com"
-                  className=" bg-blue-400 hover:bg-blue-600  shadow-lg px-5 py-2 rounded-full text-white "
+              <div className="text-sm sm:text-lg lg:text-xl mt-10 bg-blue-500 hover:bg-blue-600 shadow-lg  rounded-full">
+                <button
+                  type="button"
+                  className="text-white px-5 py-2 rounded-full"
                 >
-                  Reach out
-                </a>
+                  Reach Out
+                </button>
               </div>
             </div>
           </div>
