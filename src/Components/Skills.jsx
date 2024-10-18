@@ -39,10 +39,10 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="w-full min-h-screen bg-gradient-to-b from-slate-900 via-slate-950 bg-slate-950 py-10"
+      className="w-full min-h-screen bg-gradient-to-b from-slate-900 via-slate-950 bg-slate-950 py-20"
     >
       <div className="w-full md:w-[90%] mx-auto md:p-5 ">
-        <div className="flex justify-center lg:justify-normal ">
+        <div className="flex justify-center lg:justify-normal py-5">
           <motion.div
             id="skillH"
             ref={ref}
