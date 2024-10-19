@@ -14,26 +14,26 @@ const Project = () => {
   const Projects = [
     {
       title: "Portfolio Website",
-      github: "http://github.com",
-      link: "http://github.com",
+      github: "https://github.com/ManishDev20/Portfolio",
+      link: "https://manishcodes.netlify.app",
       img: "./img/portfolioweb.png",
     },
     {
       title: "My FFC Cafe",
-      github: "http://github.com",
-      link: "http://github.com",
+      github: "https://github.com/ManishDev20/ffc-cafe",
+      link: "https://myffccafe.netlify.app",
       img: "./img/ffccafe.png",
     },
     {
       title: "IStore: Ecom Website",
-      github: "http://github.com",
-      link: "http://github.com",
+      github: "https://github.com/ManishDev20/iStore",
+      link: "https://istorev1.netlify.app",
       img: "./img/istore.png",
     },
     {
       title: "Weather Forecast Application",
-      github: "http://github.com",
-      link: "http://github.com",
+      github: "https://github.com/ManishDev20/",
+      link: "https://aajkamossam.netlify.app",
       img: "./img/aajkamausam.png",
     },
   ];
