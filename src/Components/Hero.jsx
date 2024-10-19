@@ -111,7 +111,7 @@ const Hero = () => {
                   type="button"
                   className="text-white px-5 py-2 rounded-full"
                 >
-                  Reach Out
+                  <a href="mailto:manishdev2k02@gmail.com">Reach Out</a>
                 </button>
               </div>
             </div>

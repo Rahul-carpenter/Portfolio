@@ -13,28 +13,28 @@ const Project = () => {
 
   const Projects = [
     {
-      title: "FFC Cafe Website",
+      title: "Portfolio Website",
       github: "http://github.com",
       link: "http://github.com",
-      img: "./img/blackbg.png",
+      img: "./img/portfolioweb.png",
     },
     {
-      title: "Project 2",
+      title: "My FFC Cafe",
       github: "http://github.com",
       link: "http://github.com",
-      img: "./img/blackbg.png",
+      img: "./img/ffccafe.png",
     },
     {
-      title: "Project 3",
+      title: "IStore: Ecom Website",
       github: "http://github.com",
       link: "http://github.com",
-      img: "./img/blackbg.png",
+      img: "./img/istore.png",
     },
     {
-      title: "Project 4",
+      title: "Weather Forecast Application",
       github: "http://github.com",
       link: "http://github.com",
-      img: "./img/blackbg.png",
+      img: "./img/aajkamausam.png",
     },
   ];
   return (
@@ -64,7 +64,7 @@ const Project = () => {
             opacity: isProjectInView ? 1 : 0,
             transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
           }}
-          className="w-full  sm:w-[90%] mx-auto  p-5 mt-5 sm:mt-20 grid gap-x-2 gap-y-4 sm:gap-y-10 sm:gap-x-5 grid-cols-4 sm:grid-cols-6 md:grid-cols-9 lg:grid-cols-12 relative duration-75"
+          className="w-full h-max sm:w-[90%] mx-auto p-5 mt-5 sm:mt-20 grid gap-5 grid-cols-2 sm:grid-cols-4 md:grid-cols-8 lg:grid-cols-12 relative duration-75 "
         >
           {Projects.map((project, i) => {
             return (
@@ -74,14 +74,14 @@ const Project = () => {
                 onMouseEnter={() => sethoverIndex(i)}
                 // Reset it to null on mouseleave.
                 onMouseLeave={() => sethoverIndex(null)}
-                className={`col-span-2 md:col-span-3 relative border  rounded-lg`}
+                className={`w-full h-max -skew-x-3 md:-skew-x-12 col-span-2 sm:cols-span-2 md:col-span-4 lg:col-span-6  relative border-2 rounded-lg`}
               >
                 <div
                   className={` ${
                     hoverIndex === i ? "block" : "hidden" //  hovered item with its own index will only show.
                   } w-full h-full absolute z-10 bg-black opacity-[0.8] p-4 rounded-lg flex flex-col gap-5 md:gap-10 items-center justify-center `}
                 >
-                  <h1 className=" w-full text-yellow-500  font-semibold text-[16px] sm:text-lg md:text-xl lg:text-2xl break-words text-center">
+                  <h1 className=" w-full text-yellow-500  font-bold text-[16px] sm:text-lg md:text-xl lg:text-2xl break-words text-center">
                     {project.title}
                   </h1>
                   <div className="w-full flex gap-2 sm:gap-4 md:gap-10 justify-center px-2">
@@ -104,7 +104,7 @@ const Project = () => {
                 <img
                   src={project.img}
                   alt=""
-                  className="w-full h-full rounded-lg z-0 "
+                  className="w-[600px] h-[300px] rounded-lg z-0"
                 />
               </motion.div>
             );

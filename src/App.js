@@ -1,7 +1,7 @@
 import React from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Layout from "./Components/Layout";
-import Blog from "./Components/Blog";
+import Blogs from "./Pages/Blogs";
 import Landing from "./Pages/Landing";
 
 const App = () => {
@@ -11,7 +11,7 @@ const App = () => {
       element: <Layout />,
       children: [
         { path: "/", element: <Landing /> },
-        { path: "/blog", element: <Blog /> },
+        { path: "/blog", element: <Blogs /> },
       ],
     },
   ]);

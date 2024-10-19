@@ -25,15 +25,18 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Urbanist", sans-serif;
+  scroll-behavior: smooth;
   user-select: none;
 }
+
 .Logo {
   font-family: "jost", sans-serif;
 }
 #aboutH,
 #skillH,
 #projectH,
-#blogH {
+#blogH,
+#contactH {
   font-family: "jost", sans-serif !important;
   border: 2px slolid white;
 }

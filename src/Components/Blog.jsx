@@ -4,6 +4,7 @@ import { motion, useInView } from "framer-motion";
 import { FaUserCircle } from "react-icons/fa";
 import { FaRegClock } from "react-icons/fa";
 import { IoMdArrowForward } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const Blog = () => {
   const ref = useRef(null);
@@ -53,7 +54,7 @@ const Blog = () => {
                 alt=""
                 className="sm:w-[40%] rounded-lg"
               />
-              <div className="flex flex-col gap-2 sm:gap-4 p-2 text-white">
+              <div className="flex flex-col gap-2 sm:gap-4 p-2 text-[#e8e8e8]">
                 <div className=" flex gap-5 justify-between sm:justify-normal text-blue-200 py-2 sm:py-0 px-2">
                   <div className="flex items-center gap-2 text-sm sm:text-[16px]">
                     <FaUserCircle />
@@ -95,7 +96,7 @@ const Blog = () => {
                 alt=""
                 className="sm:w-[40%] rounded-lg"
               />
-              <div className="flex flex-col gap-2 sm:gap-4 p-2 text-white">
+              <div className="flex flex-col gap-2 sm:gap-4 p-2 text-[#e8e8e8]">
                 <div className=" flex gap-5 justify-between sm:justify-normal text-blue-200 py-2 sm:py-0 px-2">
                   <div className="flex items-center gap-2 text-sm sm:text-[16px]">
                     <FaUserCircle />
@@ -126,14 +127,15 @@ const Blog = () => {
             </motion.div>
           </div>
           <div className=" text-center  text-white my-10 p-5">
-            <a
+            <Link
+              to={"/blog"}
               href="https://www.google.com"
               target="_blank"
               rel="noopener noreferrer"
               className="font-semibold bg-black hover:bg-[#101010] border-b-2 py-2 rounded-full px-5 hover:border-b-0 relative hover:top-[2px]"
             >
               See More
-            </a>
+            </Link>
           </div>
         </div>
       </div>

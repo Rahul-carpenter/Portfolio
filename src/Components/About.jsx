@@ -92,7 +92,7 @@ const About = () => {
                   Personal Projects & Assignments
                 </h2>
                 <h3 className="text-sm lg:text-[16px] text-[#9a9a9a]">
-                  Various projects and assignments completed in my spare time
+                  Various projects and assignments completed in my spare time.
                 </h3>
               </div>
             </div>
@@ -110,12 +110,13 @@ const About = () => {
               Summary
             </h1>
             <p className="text-justify sm:text-left text-sm md:text-lg leading-6 lg:text-lg text-[#9a9a9a] px-2">
-              I am a Full-Stack Web Developer based in Rajasthan,India. A
-              self-motivated Full Stack Developer with a strong focus on
-              frontend development and a solid foundation in backend
-              technologies. Proficient in building responsive, user-friendly
-              interfaces using React.js, HTML, CSS, and JavaScript, with
-              additional experience in Node.js, Express.js, and MongoDB.
+              I'm a Full Stack Web Developer with a core focus on Frontend
+              Development, My expertise in building responsive, user-friendly
+              web applications using React, Tailwind CSS, and JavaScript. I am
+              constantly learning new tools and techniques to stay updated in
+              the ever-evolving world of web development. My goal is to make
+              meaningful contributions to the tech community and grow both
+              personally and professionally.
             </p>
           </motion.div>
           <motion.div

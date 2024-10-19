@@ -278,6 +278,22 @@ const Skills = () => {
               />
               <span>VERCEL</span>
             </motion.div>
+            <motion.div
+              ref={githubref}
+              style={{
+                rotateX: isGithubInView ? "360deg" : 0,
+                opacity: isGithubInView ? 1 : 0,
+                transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
+              }}
+              className="col-span-1 col-start-2 sm:col-start-3  sm:col-span-2 flex flex-col gap-2 justify-center items-center text-sm sm:text-[16px] font-semibold border rounded-lg bg-slate-900 p-3"
+            >
+              <img
+                src="./img/iconnetlify.svg"
+                alt=""
+                className="w-[100px] h-[100px]"
+              />
+              <span>Netlify</span>
+            </motion.div>
           </div>
         </motion.div>
       </div>
