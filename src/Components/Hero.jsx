@@ -102,17 +102,29 @@ const Hero = () => {
                   typeSpeed={30}
                   cursorStyle="_"
                   words={[
-                    "Hello, I'm Manish from India. I am a Full-Stack Web Developer with a core focus on User Interface, I create simple, responsive, fast and user-friendly Websites, Portfolio, and Web Apps. ",
+                    "Hello, I'm Manish from India. I am a Full-Stack Web Developer with a core focus on Frontend. I create simple, responsive, fast and user-friendly Websites, Portfolio, and Web Apps. ",
                   ]}
                 />
               </motion.div>
-              <div className="text-sm sm:text-lg lg:text-xl mt-10 bg-blue-500 hover:bg-blue-600 shadow-lg  rounded-full">
-                <button
-                  type="button"
-                  className="text-white px-5 py-2 rounded-full"
-                >
-                  <a href="mailto:manishdev2k02@gmail.com">Reach Out</a>
-                </button>
+              <div className="flex gap-5 ">
+                <div className="text-sm sm:text-lg lg:text-xl mt-10 bg-blue-500 hover:bg-blue-600 shadow-lg  rounded-full">
+                  <button
+                    type="button"
+                    className="text-white px-5 py-2 rounded-full"
+                  >
+                    <a href="mailto:manishdev2k02@gmail.com">Reach Out</a>
+                  </button>
+                </div>
+                <div className="text-sm sm:text-lg lg:text-xl mt-10 bg-blue-500 hover:bg-blue-600 shadow-lg  rounded-full">
+                  <button
+                    type="button"
+                    className="text-white px-5 py-2 rounded-full"
+                  >
+                    <a href="https://drive.google.com/file/d/1YknPO_Kx4kLX_FpbqOb7Pl_cxez9brtU/view?usp=drive_link">
+                      Download Resume
+                    </a>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
