@@ -102,7 +102,7 @@ const Hero = () => {
                   typeSpeed={30}
                   cursorStyle="_"
                   words={[
-                    "Hello, I'm Manish from India. I am a Full-Stack Web Developer with a core focus on Frontend. I create simple, responsive, fast and user-friendly Websites, Portfolio, and Web Apps. ",
+                    "Hello, I'm Manish from India. I am a Full-Stack Web Developer with a core focused on Frontend. I create simple, responsive, fast and user-friendly Websites, Portfolio, and Web Apps. ",
                   ]}
                 />
               </motion.div>
