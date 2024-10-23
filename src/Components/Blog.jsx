@@ -6,6 +6,17 @@ import { FaRegClock } from "react-icons/fa";
 import { IoMdArrowForward } from "react-icons/io";
 import { Link } from "react-router-dom";
 
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+const notify = () => {
+  console.log("notify called");
+  toast("Curently Unavailable. Stay Tuned!");
+};
+const handleAlert = () => {
+  notify();
+};
+
 const Blog = () => {
   const ref = useRef(null);
   const blog1ref = useRef(null);
@@ -16,8 +27,9 @@ const Blog = () => {
   return (
     <section
       id="blogs"
-      className="min-h-screen w-full bg-gradient-to-b from-slate-900 via-slate-950 to-slate-950 py-10"
+      className="min-h-screen w-full bg-gradient-to-b from-slate-900 via-slate-950 to-slate-950 py-10 relative"
     >
+      <ToastContainer className={"absolute left-1/2"} />
       <div className="w-full md:w-[90%]  mx-auto  md:p-5 ">
         <div className="flex justify-center lg:justify-normal py-5">
           <motion.div
@@ -75,7 +87,7 @@ const Blog = () => {
                   elit. In, corporis.
                 </p>
                 <div className="w-max bg-blue-600 hover:bg-blue-500 px-2 py-1 rounded-xl flex gap-2 items-center ">
-                  <a href="https://github.com/" className=" ">
+                  <a onClick={handleAlert} href="#_" className=" ">
                     Read More
                   </a>
                   <IoMdArrowForward className="hidden sm:block text-xl -rotate-[30deg]" />
@@ -118,7 +130,7 @@ const Blog = () => {
                 </p>
 
                 <div className="w-max text-center bg-blue-600 hover:bg-blue-500 px-2 py-1 rounded-xl flex gap-2 items-center ">
-                  <a href="https://github.com/" className=" ">
+                  <a onClick={handleAlert} href="#_" className=" ">
                     Read More
                   </a>
                   <IoMdArrowForward className="hidden sm:block text-xl -rotate-[30deg]" />
@@ -129,9 +141,7 @@ const Blog = () => {
           <div className=" text-center  text-white my-10 p-5">
             <Link
               to={"/blog"}
-              href="https://www.google.com"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#"
               className="font-semibold bg-black hover:bg-[#101010] border-b-2 py-2 rounded-full px-5 hover:border-b-0 relative hover:top-[2px]"
             >
               See More
