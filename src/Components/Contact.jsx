@@ -68,7 +68,7 @@ const Contact = () => {
                 className="w-full  bg-slate-900 rounded-xl "
               >
                 {/* hidden input for netlify form submission */}
-                <input type="hidden" name="form-name" value="contact" />
+                <input type="hidden" name="contact" value="contact" />
                 {/* other form inputs */}
                 <header className="text-center text-lg sm:text-xl md:text-2xl font-semibold p-5 text-white">
                   Let's Connect
