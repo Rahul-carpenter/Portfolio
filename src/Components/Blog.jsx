@@ -120,7 +120,7 @@ const Blog = () => {
                   </div>
                 </div>
                 <h1 className="text-xl md:text-xl lg:text-2xl font-bold ">
-                  The Journey of becoming a developer
+                  The Journey of becoming a developer.
                 </h1>
                 <p className="text-gray-400 text-justify sm:text-left">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
