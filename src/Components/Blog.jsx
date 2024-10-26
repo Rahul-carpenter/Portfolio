@@ -86,12 +86,14 @@ const Blog = () => {
                   cum in. Lorem ipsum dolor, sit amet consectetur adipisicing
                   elit. In, corporis.
                 </p>
-                <div className="w-max bg-blue-600 hover:bg-blue-500 px-2 py-1 rounded-xl flex gap-2 items-center ">
-                  <a onClick={handleAlert} href="#_" className=" ">
-                    Read More
-                  </a>
+                <a
+                  href="#_"
+                  onClick={handleAlert}
+                  className="w-max text-center bg-blue-600 hover:bg-blue-500 px-2 py-1 rounded-xl flex gap-2 items-center "
+                >
+                  <span>Read More</span>
                   <IoMdArrowForward className="hidden sm:block text-xl -rotate-[30deg]" />
-                </div>
+                </a>
               </div>
             </motion.div>
             <motion.div
@@ -129,12 +131,14 @@ const Blog = () => {
                   elit. In, corporis.
                 </p>
 
-                <div className="w-max text-center bg-blue-600 hover:bg-blue-500 px-2 py-1 rounded-xl flex gap-2 items-center ">
-                  <a onClick={handleAlert} href="#_" className=" ">
-                    Read More
-                  </a>
+                <a
+                  href="#_"
+                  onClick={handleAlert}
+                  className="w-max text-center bg-blue-600 hover:bg-blue-500 px-2 py-1 rounded-xl flex gap-2 items-center "
+                >
+                  <span>Read More</span>
                   <IoMdArrowForward className="hidden sm:block text-xl -rotate-[30deg]" />
-                </div>
+                </a>
               </div>
             </motion.div>
           </div>
