@@ -11,7 +11,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 const notify = () => {
   console.log("notify called");
-  toast("Curently Unavailable. Stay Tuned!");
+  toast("Coming Soon. Stay Tuned!");
 };
 const handleAlert = () => {
   notify();
@@ -62,7 +62,7 @@ const Blog = () => {
               className="sm:flex gap-5 col-span-12 p-5 duration-100 bg-slate-800 bg-opacity-[0.2] rounded-xl"
             >
               <img
-                src="./img/frontend.jpg"
+                src="./img/personalBrandingBlogPoster.png"
                 alt=""
                 className="sm:w-[40%] rounded-lg"
               />
@@ -74,11 +74,11 @@ const Blog = () => {
                   </div>
                   <div className="flex items-center  gap-2 text-sm sm:text-[16px]">
                     <FaRegClock />
-                    05 Oct 2024
+                    01 Nov 2024
                   </div>
                 </div>
                 <h1 className="text-xl md:text-xl lg:text-2xl font-bold ">
-                  How to become a Frontend Developer in 2024.
+                  Why Personal Branding Is Important For Your?
                 </h1>
                 <p className="text-gray-400 text-justify sm:text-left">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
@@ -104,7 +104,7 @@ const Blog = () => {
               className="sm:flex gap-5 col-span-12 p-5 duration-100 bg-slate-800 bg-opacity-[0.2] rounded-xl"
             >
               <img
-                src="./img/backend.webp"
+                src="./img/webdevblog.png"
                 alt=""
                 className="sm:w-[40%] rounded-lg"
               />
@@ -120,7 +120,7 @@ const Blog = () => {
                   </div>
                 </div>
                 <h1 className="text-xl md:text-xl lg:text-2xl font-bold ">
-                  Roadmap: How to become a Backend Developer in 2024.
+                  The Journey of becoming a developer
                 </h1>
                 <p className="text-gray-400 text-justify sm:text-left">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
