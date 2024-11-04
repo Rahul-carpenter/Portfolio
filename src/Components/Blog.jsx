@@ -62,10 +62,11 @@ const Blog = () => {
               className="sm:flex gap-5 col-span-12 p-5 duration-100 bg-slate-800 bg-opacity-[0.2] rounded-xl"
             >
               <img
-                src="./img/personalBrandingBlogPoster.png"
-                alt=""
                 className="sm:w-[40%] rounded-lg"
+                src="./img/personalbrandingblogthumb.jpg"
+                alt=""
               />
+
               <div className="flex flex-col gap-2 sm:gap-4 p-2 text-[#e8e8e8]">
                 <div className=" flex gap-5 justify-between sm:justify-normal text-blue-200 py-2 sm:py-0 px-2">
                   <div className="flex items-center gap-2 text-sm sm:text-[16px]">
@@ -74,21 +75,21 @@ const Blog = () => {
                   </div>
                   <div className="flex items-center  gap-2 text-sm sm:text-[16px]">
                     <FaRegClock />
-                    01 Nov 2024
+                    05 Nov 2024
                   </div>
                 </div>
                 <h1 className="text-xl md:text-xl lg:text-2xl font-bold ">
                   Why Personal Branding Is Important For Your?
                 </h1>
                 <p className="text-gray-400 text-justify sm:text-left">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-                  iure autem quo sint aspernatur. Assumenda vitae ullam labore
-                  cum in. Lorem ipsum dolor, sit amet consectetur adipisicing
-                  elit. In, corporis.
+                  In today's job market, personal branding is essential for
+                  standing out and unlocking opportunities. Whether you're a
+                  student, graduate, or professional, this guide provides
+                  actionable steps to build an authentic personal brand that
+                  connects you to your industry and boosts your career.
                 </p>
                 <a
-                  href="#_"
-                  onClick={handleAlert}
+                  href="https://medium.com/@manishdev_/the-essential-personal-branding-guide-f375a619e790"
                   className="w-max text-center bg-blue-600 hover:bg-blue-500 px-2 py-1 rounded-xl flex gap-2 items-center "
                 >
                   <span>Read More</span>
