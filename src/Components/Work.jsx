@@ -4,7 +4,7 @@ import { motion, useInView } from "framer-motion";
 import { SiGithub } from "react-icons/si";
 import { HiExternalLink } from "react-icons/hi";
 
-const Project = () => {
+const Work = () => {
   const ref = useRef(null);
   const projectref = useRef(null);
   const isProjectInView = useInView(projectref, { once: true });
@@ -40,22 +40,31 @@ const Project = () => {
   return (
     <section
       id="project"
-      className="w-full min-h-screen bg-gradient-to-b from-slate-950 via-slate-950 to-slate-900 py-20"
+      className="w-full min-h-screen dark:bg-gradient-to-b from-slate-950 via-slate-950 to-slate-900 py-20 sm:pt-40"
     >
       <div className="w-[90%] sm:w-[80%] md:w-[90%] mx-auto md:p-5 ">
-        <div className="flex justify-center lg:justify-normal ">
-          <motion.div
-            id="projectH"
-            ref={ref}
-            style={{
-              translateX: isInView ? 0 : "-100%",
-              opacity: isInView ? 1 : 0,
-              transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
-            }}
-            className=" w-max text-xl sm:text-3xl md:text-4xl text-white font-semibold py-2 px-8 border-l-[3px] border-r-[3px] lg:border-r-0 border-blue-500  bg-slate-800 duration-300"
+        <motion.div
+          ref={ref}
+          style={{
+            translateY: isInView ? "-100%" : 0,
+            opacity: isInView ? 1 : 0,
+            transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
+          }}
+          className="secHead flex justify-center px-3 my-5 relative"
+        >
+          <div
+            id="workH"
+            className="z-10 w-max text-2xl sm:text-4xl md:text-5xl  font-extrabold dark:text-white "
           >
-            My Work
-          </motion.div>
+            WORK
+          </div>
+          <div className="z-0 text-[#9a9a9a25] -top-6 sm:-top-10 md:-top-16 absolute text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold ">
+            PROJECTS
+          </div>
+        </motion.div>
+        <div className="w-full text-center dark:text-white text-lg sm:text-xl md:text-2xl">
+          Explore a collection of my projects, showcasing skills in development,
+          design, and problem-solving through personal projects and creativity.
         </div>
         <motion.div
           ref={projectref}
@@ -74,7 +83,7 @@ const Project = () => {
                 onMouseEnter={() => sethoverIndex(i)}
                 // Reset it to null on mouseleave.
                 onMouseLeave={() => sethoverIndex(null)}
-                className={`w-full h-max -skew-x-3 md:-skew-x-12 col-span-2 sm:cols-span-2 md:col-span-4 lg:col-span-6  relative border-2 rounded-lg`}
+                className={`w-full h-max  col-span-2 sm:cols-span-2 md:col-span-4 lg:col-span-6  relative border-2 rounded-lg`}
               >
                 <div
                   className={` ${
@@ -115,4 +124,4 @@ const Project = () => {
   );
 };
 
-export default Project;
+export default Work;

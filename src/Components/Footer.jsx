@@ -21,33 +21,33 @@ const Footer = () => {
       </div>
       <div className="flex gap-4 justify-center text-white my-5 text-4xl ">
         <a
-          href="#hero"
+          href="https://www.linkedin.com/in/manishdev21/"
           className="flex flex-col items-center gap-2 hover:text-blue-500"
         >
           <BsLinkedin />
         </a>
         <a
-          href="#hero"
+          href="https://github.com/manishdev20"
           className="flex flex-col items-center gap-2 hover:text-blue-500"
         >
           <FaSquareGithub />
         </a>
         <a
-          href="#hero"
+          href="https://x.com/Manishdev21"
           className="flex flex-col items-center gap-2 hover:text-blue-500"
         >
           <FaSquareXTwitter />
         </a>
 
         <a
-          href="#hero"
+          href="mailto:manishdev21@gmail.com"
           className="flex flex-col items-center gap-2 hover:text-blue-500"
         >
           <IoMdMail />
         </a>
       </div>
-      <div className="flex gap-4 justify-center text-gray-400 my-5 text-sm ">
-        @2024 Manish.Dev All Rights Reserved.
+      <div className="flex gap-4 justify-center text-gray-400 my-5  ">
+        © 2024 | Manish.Dev
       </div>
     </section>
   );

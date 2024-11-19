@@ -1,133 +1,216 @@
-import React, { useRef } from "react";
-import { useInView } from "framer-motion";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+
 import { motion } from "framer-motion";
-import { Typewriter } from "react-simple-typewriter";
-// import { MdMenu } from "react-icons/md";
-// import { MdMenuOpen } from "react-icons/md";
+
+import { FaArrowRight } from "react-icons/fa6";
+import { MdMenuOpen } from "react-icons/md";
+import { MdOutlineMenu } from "react-icons/md";
+import { CgDarkMode } from "react-icons/cg";
 
 const Hero = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  // dark mode / light mode implementations
+
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    // Check local storage for theme preference
+    const storedTheme = localStorage.getItem("theme");
+    if (storedTheme) {
+      return storedTheme === "dark"; // Return true if 'dark', false otherwise
+    }
+    // If no theme is set, default to light mode
+    localStorage.setItem("theme", "dark");
+    return false; // Default is light mode
+  });
+
+  // Apply the theme on initial load
+  useEffect(() => {
+    const root = document.documentElement;
+    if (isDarkMode) {
+      root.classList.add("dark");
+    } else {
+      root.classList.remove("dark");
+    }
+  }, [isDarkMode]);
+
+  // Toggle the dark mode and save to localStorage
+  const toggleDarkMode = () => {
+    setIsDarkMode((prev) => {
+      const newMode = !prev;
+      localStorage.setItem("theme", newMode ? "dark" : "light");
+      return newMode;
+    });
+  };
+  // days counter
+
+  const [days, setDays] = useState(0);
+
+  useEffect(() => {
+    // Define the start date
+    const startDate = new Date("2022-09-01");
+    const today = new Date();
+
+    // Calculate the difference in time
+    const differenceInTime = today - startDate;
+
+    // Convert time difference to days
+    const differenceInDays = Math.floor(
+      differenceInTime / (1000 * 60 * 60 * 24)
+    );
+    setDays(differenceInDays);
+  }, []); // Empty dependency array ensures this runs only once on mount
+
+  // Menu toggle handling
+
+  const [menuOpen, setMenuOpen] = useState(false);
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
 
   return (
-    <section id="hero" className="">
-      <div className="w-full h-screen bg-gradient-to-b from-slate-900 via-slate-950 to-slate-950">
-        <div className="Nav w-[100%] md:w-[90%] lg:w-[80%] h-[80px] mx-auto flex justify-start  items-center px-5 relative">
-          <div className=" text-xl sm:text-2xl md:text-4xl font-bold flex items-center  text-white">
-            Manish
-            <motion.span
-              ref={ref}
-              style={{
-                transform: isInView ? "none" : "translateY(-100%)",
-                opacity: isInView ? 1 : 0,
-                transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
-              }}
-              className="Logo text-blue-500  relative"
+    <section
+      id="hero"
+      className="w-full h-max min-[1025px]:min-h-screen bg-white dark:bg-[#020617] pb-20 overflow-hidden"
+    >
+      <div className="Container max-w-[1200px] mx-auto ">
+        <div className="Navbar w-full h-[80px] flex justify-between items-center px-10 relative z-[999]">
+          <div className="Logo text-5xl sm:text-6xl flex items-center dark:text-white pb-4">
+            manish
+          </div>
+          <div className="navLinks md:flex items-center gap-5 lg:gap-10 hidden  lg:text-lg dark:text-white mt-5">
+            <a href="#about" className="hover:text-[#4e43ca]">
+              About me
+            </a>
+            <a href="#project" className="hover:text-[#4e43ca]">
+              Work
+            </a>
+            <Link to={"/contact-form"} className="hover:text-[#4e43ca]">
+              Contact
+            </Link>
+          </div>
+          <div className="mode md:flex items-center gap-5 hidden px-4 py-2 rounded-full mt-5">
+            <div
+              onClick={toggleDarkMode}
+              className="chageMode hover:bg-[#a5a5a5] hover:dark:bg-[#41410b] p-2 rounded-full cursor-pointer"
             >
-              .dev
-            </motion.span>
+              <CgDarkMode className="text-black dark:text-white text-lg sm:text-xl md:text-2xl " />
+            </div>
+            <div className="flex items-center gap-2 bg-gray-600 hover:bg-gray-700 dark:bg-[#4e43ca] dark:hover:bg-[#1f1777] px-2 py-1 rounded-xl text-white">
+              <Link to={"/contact-form"} className=" ">
+                Let's Work
+              </Link>
+              <FaArrowRight className={``} />
+            </div>
+          </div>
+          <div className="hamburger md:hidden text-2xl dark:text-white flex items-center gap-5">
+            <div className="chageMode hover:bg-[#a5a5a5] hover:dark:bg-[#4b4b4b] p-2 rounded-full">
+              <CgDarkMode onClick={toggleDarkMode} />
+            </div>
+            <MdOutlineMenu onClick={toggleMenu} />
+          </div>
+          <div
+            className={`menu w-full h-screen ${
+              menuOpen === true ? "scale-y-[1]" : " scale-y-0"
+            } flex items-center flex-col gap-5 absolute left-0 top-[0] bg-[#ffffffec] dark:bg-[#000000ee] ease-in duration-150 `}
+          >
+            <div className="closeMenu w-full px-10 dark:text-white h-[80px] text-2xl text-left  flex items-center pb-5 justify-end gap-10">
+              <MdMenuOpen onClick={toggleMenu} />
+            </div>
+            <div className="menuItems flex flex-col gap-5 text-center dark:text-white">
+              <a
+                href="#about"
+                className="hover:text-[#4e43ca]"
+                onClick={toggleMenu}
+              >
+                About me
+              </a>
+              <a
+                href="#project"
+                className="hover:text-[#4e43ca]"
+                onClick={toggleMenu}
+              >
+                Work
+              </a>
+              <a
+                href="#blogs"
+                className="hover:text-[#4e43ca]"
+                onClick={toggleMenu}
+              >
+                Blogs
+              </a>
+              <a
+                href="#contact"
+                className="hover:text-[#4e43ca]"
+                onClick={toggleMenu}
+              >
+                Contact
+              </a>
+            </div>
           </div>
         </div>
-        <div
-          id="bgBlack"
-          className="w-full h-[80%] flex min-[1025px]:block items-center  "
-        >
-          <div className="w-full flex justify-center pt-[50px] sm:pt-10 md:pt-20 py-5 relative">
-            <div className="absolute  left-1/2 transform -translate-x-1/2 top-0  md:top-5">
-              <img
-                src="./img/blackbg.png"
-                alt=""
-                className="w-auto max-w-[500px] h-auto max-h-[500px] opacity-30"
-              />
-            </div>
-            <div className="w-[90%] md:w-[80%] lg:w-[60%]  flex flex-col  items-center gap-5 ">
-              <motion.div
-                initial="initial"
-                whileHover="hovered"
-                className="text-white bg-[#202020] border-2 w-max px-6 py-2 rounded-full text-[12px] sm:text-lg relative overflow-hidden"
-              >
-                <motion.div
-                  variants={{ initial: { y: 0 }, hovered: { y: "-100px" } }}
-                >
-                  Web Developer
-                </motion.div>
-                <motion.div
-                  className="absolute flex items-center justify-center text-center inset-0"
-                  variants={{ initial: { y: "100px" }, hovered: { y: 0 } }}
-                >
-                  Programmer
-                </motion.div>
-              </motion.div>
-              <div className="pt-3 sm:pt-5 text-white">
-                <div className="text-4xl min-[400px]:text-5xl sm:text-6xl md:text-7xl min-[1075px]:text-8xl ">
-                  <div className="font-extrabold ">
-                    <motion.span
-                      ref={ref}
-                      className="relative duration-300"
-                      style={{
-                        left: isInView ? "-5px" : "200%",
-                        opacity: isInView ? 1 : 0,
-                        transition:
-                          "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
-                      }}
-                    >
-                      Manish
-                    </motion.span>
-                    <motion.span
-                      ref={ref}
-                      className="relative duration-300 "
-                      style={{
-                        right: isInView ? "-5px" : "200%",
-                        opacity: isInView ? 1 : 0,
-                        transition:
-                          "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
-                      }}
-                    >
-                      Meena
-                    </motion.span>
-                  </div>
-                </div>
-              </div>
-
-              <motion.div
-                ref={ref}
-                initial={{ opacity: 0 }}
-                whileInView={{
-                  opacity: isInView ? 1 : 0,
-                }}
-                className="w-[90%] sm:w-full text-sm sm:text-lg pt-3 sm:pt-5 text-center text-[#c7bbbb] "
-              >
-                <Typewriter
-                  loop={1}
-                  typeSpeed={30}
-                  cursorStyle="_"
-                  words={[
-                    "Hello, I'm Manish from India. I am a Full-Stack Web Developer with a core focused on Frontend. I create simple, responsive, fast and user-friendly Websites, Portfolio, and Web Apps. ",
-                  ]}
-                />
-              </motion.div>
-              <div className="flex gap-5 ">
-                <div className="text-sm sm:text-lg lg:text-xl mt-10 bg-blue-500 hover:bg-blue-600 shadow-lg  rounded-full">
-                  <button
-                    type="button"
-                    className="text-white px-5 py-2 rounded-full"
-                  >
-                    <a href="mailto:manishdev2k02@gmail.com">Hire me</a>
-                  </button>
-                </div>
-                <div className="text-sm sm:text-lg lg:text-xl mt-10 bg-blue-500 hover:bg-blue-600 shadow-lg  rounded-full">
-                  <button
-                    type="button"
-                    className="text-white px-5 py-2 rounded-full"
-                  >
-                    <a href="https://drive.google.com/file/d/1YknPO_Kx4kLX_FpbqOb7Pl_cxez9brtU/view?usp=drive_link">
-                      Download Resume
-                    </a>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div className=" flex justify-center my-10 sm:mt-32 ">
+          <motion.div
+            initial="initial"
+            whileHover="hovered"
+            className="dark:text-white bg-white dark:bg-[#202020] border-2 border-black dark:border-white w-max px-6 py-2 rounded-full  text-[12px] sm:text-lg relative overflow-hidden"
+          >
+            <motion.div
+              variants={{ initial: { y: 0 }, hovered: { y: "-100px" } }}
+            >
+              Web Developer
+            </motion.div>
+            <motion.div
+              className="absolute flex items-center justify-center text-center inset-0"
+              variants={{ initial: { y: "100px" }, hovered: { y: 0 } }}
+            >
+              Open to work
+            </motion.div>
+          </motion.div>
+        </div>
+        <div className="flex justify-center text-3xl sm:text-5xl dark:text-white font-bold ">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0 }}
+            className="flex items-center space-x-2"
+          >
+            Hello World!
+            <motion.span
+              animate={{
+                rotate: [0, 20, -20, 20, -20, 0],
+              }}
+              transition={{
+                repeat: Infinity,
+                repeatType: "loop",
+                duration: 1.5,
+                ease: "easeInOut",
+              }}
+              className="text-3xl sm:text-5xl pb-2"
+            >
+              👋
+            </motion.span>
+          </motion.div>
+        </div>
+        <div className="w-[90%] sm:w-[70%] mx-auto flex justify-center text-xl sm:text-2xl dark:text-white leading-8 sm:leading-10 text-center mt-10">
+          I'm Manish. A Developer, Programmer, Future Founder, Freelancer and a
+          Techie who build beautiful websites and talk about tech.
+        </div>
+        <div className="w-[90%] sm:w-[70%]  mx-auto sm:text-xl dark:text-white  text-center mt-10">
+          It's been
+          <span className=" mx-2 rounded-lg  font-bold underline text-yellow-500 hover:text-black dark:hover:text-white">
+            {days}
+          </span>
+          days since I started coding.
+        </div>
+        <div className="flex justify-center gap-10 mt-10">
+          <Link
+            to={"/contact-form"}
+            className="py-2 px-4 bg-gray-800 dark:bg-[#4e43ca] dark:hover:bg-[#1f1777] rounded-full text-white"
+          >
+            Let's Work
+          </Link>
+          <button className="py-2 px-4 bg-gray-800 dark:bg-[#4e43ca] dark:hover:bg-[#1f1777] rounded-full text-white">
+            My Resume
+          </button>
         </div>
       </div>
     </section>

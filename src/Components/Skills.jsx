@@ -17,6 +17,7 @@ const Skills = () => {
   const gitref = useRef(null);
   const githubref = useRef(null);
   const vercelref = useRef(null);
+  const netlifyref = useRef(null);
   const webref = useRef(null);
   const depref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -34,28 +35,48 @@ const Skills = () => {
   const gitInView = useInView(gitref, { once: true });
   const isGithubInView = useInView(githubref, { once: true });
   const isVercelInView = useInView(vercelref, { once: true });
+  const isNetlifyInView = useInView(vercelref, { once: true });
   const isWebInView = useInView(webref, { once: true });
   const isDepInView = useInView(depref, { once: true });
   return (
     <section
       id="skills"
-      className="w-full min-h-screen bg-gradient-to-b from-slate-900 via-slate-950 bg-slate-950 py-20"
+      className="w-full min-h-screen bg-white dark:bg-[#030d2b] py-20 pt-40 sm:pt-60 relative"
     >
+      <div class="custom-shape-divider-top-1731752618">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M602.45,3.86h0S572.9,116.24,281.94,120H923C632,116.24,602.45,3.86,602.45,3.86Z"
+            class="shape-fill fill-white dark:fill-[#1b2237]"
+          ></path>
+        </svg>
+      </div>
       <div className="w-full md:w-[90%] mx-auto md:p-5 ">
-        <div className="flex justify-center lg:justify-normal py-5">
-          <motion.div
-            id="skillH"
-            ref={ref}
-            style={{
-              translateX: isInView ? 0 : "-100%",
-              opacity: isInView ? 1 : 0,
-              transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
-            }}
-            className=" w-max text-xl sm:text-3xl md:text-4xl text-white font-semibold py-2 px-8 border-l-[3px] border-r-[3px] lg:border-r-0 border-blue-500  bg-slate-800 duration-300"
+        <motion.div
+          ref={ref}
+          style={{
+            translateY: isInView ? "-100%" : 0,
+            opacity: isInView ? 1 : 0,
+            transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
+          }}
+          className="secHead flex justify-center px-3 sm:my-5 relative"
+        >
+          <div
+            id="workH"
+            className="z-10 w-max uppercase text-2xl sm:text-4xl md:text-5xl font-extrabold  dark:text-[#fff] "
           >
             Tech Stack
-          </motion.div>
-        </div>
+          </div>
+          <div className="z-0 uppercase  text-[#5e5e5e25] dark:text-[#5e5e5e67]  -top-6 sm:-top-10 md:-top-12 lg:-top-16 absolute text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold ">
+            Tech Stack
+          </div>
+        </motion.div>
+
         <motion.div
           initial="initial"
           whileHover="hovered"
@@ -65,18 +86,18 @@ const Skills = () => {
             opacity: isHead1InView ? 1 : 0,
             transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
           }}
-          className="text-white bg-[#202020] border-2 w-max px-10 py-2 rounded-full text-[12px] sm:text-lg relative overflow-hidden mt-10 mx-auto duration-75"
+          className="dark:text-white dark:bg-[#202020] border-2 border-black dark:border-white w-max px-10 py-2 rounded-full text-[12px] sm:text-lg relative overflow-hidden mt-0 sm:mt-10 mx-auto duration-75"
         >
           <motion.div
             variants={{ initial: { y: 0 }, hovered: { y: "-100px" } }}
           >
-            Web Technologies
+            Web Development
           </motion.div>
           <motion.div
-            className="absolute flex items-center justify-center text-center inset-0 text-blue-500 font-semibold"
+            className="absolute flex items-center justify-center text-center inset-0"
             variants={{ initial: { y: "100px" }, hovered: { y: 0 } }}
           >
-            Frontend <span className="text-white px-2">&</span> Backend
+            Full Stack Development
           </motion.div>
         </motion.div>
         <motion.div
@@ -96,7 +117,7 @@ const Skills = () => {
                 opacity: isHtmlInView ? 1 : 0,
                 transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
               }}
-              className="col-span-1 sm:col-span-2 flex flex-col gap-2 justify-center items-center text-sm sm:text-[16px] font-semibold border rounded-lg bg-slate-900 p-3 duration-500"
+              className="col-span-1 cursor-pointer  sm:col-span-2 flex flex-col gap-2 justify-center items-center text-sm sm:text-[16px] font-semibold border rounded-lg bg-[#3e3e3e] dark:bg-slate-900 p-3 duration-500"
             >
               <img src="./img/iconhtml.svg" alt="" />
               <span>HTML</span>
@@ -108,7 +129,7 @@ const Skills = () => {
                 opacity: isCssInView ? 1 : 0,
                 transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
               }}
-              className="col-span-1 sm:col-span-2 flex flex-col gap-2 justify-center items-center text-sm sm:text-[16px] font-semibold border rounded-lg bg-slate-900 p-3"
+              className="col-span-1 cursor-pointer sm:col-span-2 flex flex-col gap-2 justify-center items-center text-sm sm:text-[16px] font-semibold border rounded-lg bg-[#3e3e3e] dark:bg-slate-900 p-3"
             >
               <img src="./img/iconcss.svg" alt="" />
               <span>CSS</span>
@@ -120,7 +141,7 @@ const Skills = () => {
                 opacity: isJavascriptInView ? 1 : 0,
                 transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
               }}
-              className="col-span-1 sm:col-span-2 flex flex-col gap-2 justify-center items-center text-sm sm:text-[16px] font-semibold border rounded-lg bg-slate-900 p-3"
+              className="col-span-1 cursor-pointer sm:col-span-2 flex flex-col gap-2 justify-center items-center text-sm sm:text-[16px] font-semibold border rounded-lg bg-[#3e3e3e] dark:bg-slate-900 p-3"
             >
               <img src="./img/iconjavascript.svg" alt="" />
               <span>JAVASCRIPT</span>
@@ -132,7 +153,7 @@ const Skills = () => {
                 opacity: isBootstrapInView ? 1 : 0,
                 transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
               }}
-              className="col-span-1 sm:col-span-2 flex flex-col gap-2 justify-center items-center text-sm sm:text-[16px] font-semibold border rounded-lg bg-slate-900 p-3"
+              className="col-span-1 cursor-pointer sm:col-span-2 flex flex-col gap-2 justify-center items-center text-sm sm:text-[16px] font-semibold border rounded-lg bg-[#3e3e3e] dark:bg-slate-900 p-3"
             >
               <img src="./img/iconbootstrap.svg" alt="" />
               <span>BOOTSTRAP</span>
@@ -144,7 +165,7 @@ const Skills = () => {
                 opacity: isTailwindInView ? 1 : 0,
                 transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
               }}
-              className="col-span-1 sm:col-span-2 flex flex-col gap-2 justify-center items-center text-sm sm:text-[16px] font-semibold border rounded-lg bg-slate-900 p-3"
+              className="col-span-1 cursor-pointer sm:col-span-2 flex flex-col gap-2 justify-center items-center text-sm sm:text-[16px] font-semibold border rounded-lg bg-[#3e3e3e] dark:bg-slate-900 p-3"
             >
               <img src="./img/icontailwind.svg" alt="" />
               <span>TAILWIND CSS</span>
@@ -156,7 +177,7 @@ const Skills = () => {
                 opacity: isReactInView ? 1 : 0,
                 transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
               }}
-              className="col-span-1 sm:col-span-2 flex flex-col gap-2 justify-center items-center text-sm sm:text-[16px] font-semibold border rounded-lg bg-slate-900 p-3"
+              className="col-span-1 cursor-pointer sm:col-span-2 flex flex-col gap-2 justify-center items-center text-sm sm:text-[16px] font-semibold border rounded-lg bg-[#3e3e3e] dark:bg-slate-900 p-3"
             >
               <img src="./img/iconreactjs.svg" alt="" />
               <span>REACT JS</span>
@@ -168,7 +189,7 @@ const Skills = () => {
                 opacity: isNodeInView ? 1 : 0,
                 transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
               }}
-              className="col-span-1 sm:col-span-2  lg:col-start-4 flex flex-col gap-2 justify-center items-center text-sm sm:text-[16px] font-semibold border rounded-lg bg-slate-900 p-3"
+              className="col-span-1 cursor-pointer sm:col-span-2  lg:col-start-4 flex flex-col gap-2 justify-center items-center text-sm sm:text-[16px] font-semibold border rounded-lg bg-[#3e3e3e] dark:bg-slate-900 p-3"
             >
               <img src="./img/iconnodejs.svg" alt="" width={90} height={90} />
               <span>NODE JS</span>
@@ -180,7 +201,7 @@ const Skills = () => {
                 opacity: isExpressInView ? 1 : 0,
                 transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
               }}
-              className="col-span-1 sm:col-span-2 flex flex-col gap-2 justify-center items-center text-sm sm:text-[16px] font-semibold border rounded-lg bg-slate-900 p-3"
+              className="col-span-1 cursor-pointer sm:col-span-2 flex flex-col gap-2 justify-center items-center text-sm sm:text-[16px] font-semibold border rounded-lg bg-[#3e3e3e] dark:bg-slate-900 p-3"
             >
               <img
                 src="./img/iconexpressjs.svg"
@@ -197,14 +218,13 @@ const Skills = () => {
                 opacity: isMongoInView ? 1 : 0,
                 transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
               }}
-              className="col-span-2 sm:col-span-2  sm:col-start-2 md:col-start-4 lg:col-start-auto flex flex-col gap-2 justify-center items-center text-sm sm:text-[16px] font-semibold border rounded-lg bg-slate-900 p-3  "
+              className="col-span-2 sm:col-span-2  sm:col-start-2 md:col-start-4 lg:col-start-auto flex flex-col gap-2 justify-center items-center text-sm sm:text-[16px] font-semibold border rounded-lg bg-[#3e3e3e] dark:bg-slate-900 p-3  "
             >
               <img src="./img/iconmongodb.svg" alt="" width={90} height={90} />
               <span>MongoDB</span>
             </motion.div>
           </div>
         </motion.div>
-
         <motion.div
           initial="initial"
           whileHover="hovered"
@@ -214,18 +234,18 @@ const Skills = () => {
             opacity: isHead2InView ? 1 : 0,
             transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
           }}
-          className="text-white bg-[#202020] border-2 w-max px-10 py-2 rounded-full text-[12px] sm:text-lg relative overflow-hidden mt-10 mx-auto duration-75 "
+          className="text-black dark:text-white  dark:bg-[#202020] border-2 border-black dark:border-white w-max px-10 py-2 rounded-full text-[12px] sm:text-lg relative overflow-hidden mt-10 mx-auto duration-75 "
         >
           <motion.div
             variants={{ initial: { y: 0 }, hovered: { y: "-100px" } }}
           >
-            Other Tools
+            Web Deployment
           </motion.div>
           <motion.div
-            className="absolute flex items-center justify-center text-center inset-0 text-blue-500 font-semibold "
+            className="absolute flex items-center justify-center text-center inset-0 "
             variants={{ initial: { y: "100px" }, hovered: { y: 0 } }}
           >
-            Web Deployment
+            Code Management
           </motion.div>
         </motion.div>
         <motion.div
@@ -245,7 +265,7 @@ const Skills = () => {
                 opacity: gitInView ? 1 : 0,
                 transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
               }}
-              className="col-span-1 sm:col-span-2 flex flex-col gap-2 justify-center items-center text-sm sm:text-[16px] font-semibold border rounded-lg bg-slate-900 p-3"
+              className="col-span-1 cursor-pointer sm:col-span-2 flex flex-col gap-2 justify-center items-center text-sm sm:text-[16px] font-semibold border rounded-lg bg-[#3e3e3e] dark:bg-slate-900 p-3"
             >
               <img src="./img/icongit.svg" alt="" />
               <span>GIT</span>
@@ -257,7 +277,7 @@ const Skills = () => {
                 opacity: isGithubInView ? 1 : 0,
                 transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
               }}
-              className="col-span-1 sm:col-span-2 flex flex-col gap-2 justify-center items-center text-sm sm:text-[16px] font-semibold border rounded-lg bg-slate-900 p-3"
+              className="col-span-1 cursor-pointer sm:col-span-2 flex flex-col gap-2 justify-center items-center text-sm sm:text-[16px] font-semibold border rounded-lg bg-[#3e3e3e] dark:bg-slate-900 p-3"
             >
               <img src="./img/icongithub.svg" alt="" />
               <span>GITHUB</span>
@@ -269,7 +289,7 @@ const Skills = () => {
                 opacity: isVercelInView ? 1 : 0,
                 transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
               }}
-              className="col-span-1 sm:col-span-2 flex flex-col gap-2 justify-center items-center text-sm sm:text-[16px] font-semibold border rounded-lg bg-slate-900 p-3"
+              className="col-span-1 cursor-pointer sm:col-span-2 flex flex-col gap-2 justify-center items-center text-sm sm:text-[16px] font-semibold border rounded-lg bg-[#3e3e3e] dark:bg-slate-900 p-3"
             >
               <img
                 src="./img/iconvercel.svg"
@@ -279,13 +299,13 @@ const Skills = () => {
               <span>VERCEL</span>
             </motion.div>
             <motion.div
-              ref={githubref}
+              ref={netlifyref}
               style={{
-                rotateX: isGithubInView ? "360deg" : 0,
-                opacity: isGithubInView ? 1 : 0,
+                rotateX: isNetlifyInView ? "360deg" : 0,
+                opacity: isNetlifyInView ? 1 : 0,
                 transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
               }}
-              className="col-span-1 col-start-2 sm:col-start-3  sm:col-span-2 flex flex-col gap-2 justify-center items-center text-sm sm:text-[16px] font-semibold border rounded-lg bg-slate-900 p-3"
+              className="col-span-1 cursor-pointer col-start-2 sm:col-start-3  sm:col-span-2 flex flex-col gap-2 justify-center items-center text-sm sm:text-[16px] font-semibold border rounded-lg bg-[#3e3e3e] dark:bg-slate-900 p-3"
             >
               <img
                 src="./img/iconnetlify.svg"
@@ -297,7 +317,6 @@ const Skills = () => {
           </div>
         </motion.div>
       </div>
-      <hr className="w-[80%] mx-auto bg-gradient-to-r from-slate-800 via-slate-500 to-slate-800 border-none h-[1px] my-5 rounded-full"></hr>
     </section>
   );
 };

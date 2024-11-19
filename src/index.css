@@ -2,41 +2,116 @@
 @tailwind components;
 @tailwind utilities;
 
-/* .urbanist-<uniquifier> {
-    font-family: "Urbanist", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: <weight>;
-    font-style: normal;
-  } */
-
-/*
-
-.jost-<uniquifier> {
-  font-family: "Jost", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-} */
-
+/* font-family: "Montserrat", sans-serif; */
+/* font-family: "Poppins", sans-serif; */
+/* font-family: "Lavishly Yours", cursive; */
 /* Globel CSS */
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Urbanist", sans-serif;
+  font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
-  user-select: none;
+}
+
+input:-webkit-autofill {
+  box-shadow: 0 0 0px 1000px transparent inset !important;
+  background-color: transparent !important;
+  -webkit-text-fill-color: inherit !important;
 }
 
 .Logo {
-  font-family: "jost", sans-serif;
+  font-family: "Lavishly Yours", cursive;
+  user-select: none;
 }
 #aboutH,
 #skillH,
 #projectH,
 #blogH,
 #contactH {
-  font-family: "jost", sans-serif !important;
+  font-family: "Poppins", sans-serif;
   border: 2px slolid white;
+
+  transition-duration: 1s;
+}
+.secHead {
+  transform-origin: left;
+}
+.custom-shape-divider-top-1731323367 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1731323367 svg {
+  position: relative;
+  display: block;
+  width: calc(159% + 1.3px);
+  height: 183px;
+}
+
+.byCoffee,
+.hireMe {
+  font-family: "Montserrat", sans-serif;
+}
+
+.custom-shape-divider-top-1731476873 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1731476873 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 70px;
+  transform: rotateY(180deg);
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+  .custom-shape-divider-top-1731476873 svg {
+    width: calc(100% + 1.3px);
+    height: 53px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .leadingP {
+    line-height: 35px !important;
+  }
+}
+
+.custom-shape-divider-top-1731752618 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1731752618 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 70px;
+}
+
+.custom-shape-divider-top-1731752618 .shape-fill {
+  fill: #ffffff;
+}
+
+.skillCard:hover {
+  transform: scale(1.05) !important;
+  transition-duration: 0ms !important;
 }
