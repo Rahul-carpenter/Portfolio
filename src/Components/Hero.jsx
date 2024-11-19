@@ -69,7 +69,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="w-full h-max min-[1025px]:min-h-screen bg-white dark:bg-[#020617] pb-20 overflow-hidden"
+      className="w-full h-screen sm:h-max min-[1025px]:min-h-screen bg-white dark:bg-[#020617] pb-20 overflow-hidden"
     >
       <div className="Container max-w-[1200px] mx-auto ">
         <div className="Navbar w-full h-[80px] flex justify-between items-center px-10 relative z-[999]">
@@ -108,7 +108,7 @@ const Hero = () => {
             <MdOutlineMenu onClick={toggleMenu} />
           </div>
           <div
-            className={`menu w-full h-screen ${
+            className={`menu w-full h-screen  ${
               menuOpen === true ? "scale-y-[1]" : " scale-y-0"
             } flex items-center flex-col gap-5 absolute left-0 top-[0] bg-[#ffffffec] dark:bg-[#000000ee] ease-in duration-150 `}
           >
@@ -130,20 +130,15 @@ const Hero = () => {
               >
                 Work
               </a>
-              <a
-                href="#blogs"
-                className="hover:text-[#4e43ca]"
-                onClick={toggleMenu}
-              >
-                Blogs
-              </a>
-              <a
+
+              <Link
+                to={"/contact-form"}
                 href="#contact"
                 className="hover:text-[#4e43ca]"
                 onClick={toggleMenu}
               >
                 Contact
-              </a>
+              </Link>
             </div>
           </div>
         </div>
