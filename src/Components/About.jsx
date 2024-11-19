@@ -43,7 +43,7 @@ const About = () => {
         >
           <div
             id="aboutH"
-            className=" w-max sm:text-xl md:text-2xl text-white dark:text-black font-bold  "
+            className=" w-max text-xl md:text-2xl text-white dark:text-black font-bold"
           >
             About me
           </div>
