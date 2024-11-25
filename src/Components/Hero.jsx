@@ -203,9 +203,12 @@ const Hero = () => {
           >
             Let's Work
           </Link>
-          <button className="py-2 px-4 bg-gray-800 dark:bg-[#4e43ca] dark:hover:bg-[#1f1777] rounded-full text-white">
+          <a
+            href="https://drive.google.com/file/d/1YknPO_Kx4kLX_FpbqOb7Pl_cxez9brtU/view?usp=drive_link"
+            className="py-2 px-4 bg-gray-800 dark:bg-[#4e43ca] dark:hover:bg-[#1f1777] rounded-full text-white"
+          >
             My Resume
-          </button>
+          </a>
         </div>
       </div>
     </section>
