@@ -19,6 +19,12 @@ const Work = () => {
       img: "./img/portfolioweb.png",
     },
     {
+      title: "The Growth Letter",
+      github: "https://github.com/ManishDev20/The-Growth-Letter",
+      link: "https://thegrowthletter.netlify.app",
+      img: "./img/thegrowthletter.png",
+    },
+    {
       title: "My FFC Cafe",
       github: "https://github.com/ManishDev20/ffc-cafe",
       link: "https://myffccafe.netlify.app",
@@ -29,12 +35,6 @@ const Work = () => {
       github: "https://github.com/ManishDev20/iStore",
       link: "https://istorev1.netlify.app",
       img: "./img/istore.png",
-    },
-    {
-      title: "Weather Forecast Application",
-      github: "https://github.com/ManishDev20/",
-      link: "https://aajkamossam.netlify.app",
-      img: "./img/aajkamausam.png",
     },
   ];
   return (

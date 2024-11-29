@@ -89,7 +89,7 @@ const ProgressDashboard = () => {
             <span className="text-gray-400 ">13 November, 2024</span>
           </div>
         </div>
-        <div className="countdown py-5 sm:p-5 rounded my-5 sm:my-10 text-center text-white bg-gradient-to-r from-slate-950 via-slate-800 to-slate-950">
+        <div className="countdown py-5 sm:p-5 rounded my-5 sm:my-10 text-center text-white bg-gradient-to-r from-slate-800 via-slate-950 to-slate-800">
           <h1 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6">
             Challenge will start in
           </h1>
