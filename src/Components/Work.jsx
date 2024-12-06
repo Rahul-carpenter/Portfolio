@@ -31,10 +31,10 @@ const Work = () => {
       img: "./img/ffccafe.png",
     },
     {
-      title: "IStore: Ecom Website",
-      github: "https://github.com/ManishDev20/iStore",
-      link: "https://istorev1.netlify.app",
-      img: "./img/istore.png",
+      title: "DS Network Solutions",
+      github: "https://github.com/ManishDev20/DS-Network-Solution",
+      link: "https://dsnetworksolution.netlify.app",
+      img: "./img/dsns.png",
     },
   ];
   return (
@@ -88,7 +88,7 @@ const Work = () => {
                 <div
                   className={` ${
                     hoverIndex === i ? "block" : "hidden" //  hovered item with its own index will only show.
-                  } w-full h-full absolute z-10 bg-black opacity-[0.8] p-4 rounded-lg flex flex-col gap-5 md:gap-10 items-center justify-center `}
+                  } w-full h-full absolute z-10 bg-black p-4 rounded-lg flex flex-col gap-5 md:gap-10 items-center justify-center `}
                 >
                   <h1 className=" w-full text-yellow-500  font-bold text-[16px] sm:text-lg md:text-xl lg:text-2xl break-words text-center">
                     {project.title}

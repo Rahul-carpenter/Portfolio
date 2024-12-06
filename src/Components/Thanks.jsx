@@ -7,7 +7,7 @@ const Thanks = () => {
         <div className="text-center text-lg sm:text-xl md:text-3xl lg:text-4xl font-semibold my-5">
           " Thanks for Scrolling! "
         </div>
-        <div className="text-center sm:text-lg  md:text-xl ">
+        <div className="text-center sm:text-lg  md:text-xl px-2">
           I hope you found my work interesting. If you have any more questions
           or have a project in mind.
         </div>

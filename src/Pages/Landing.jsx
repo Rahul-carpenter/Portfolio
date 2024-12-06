@@ -6,7 +6,6 @@ import Work from "../Components/Work";
 import Footer from "../Components/Footer";
 import Services from "../Components/Services";
 import Thanks from "../Components/Thanks";
-
 const Landing = () => {
   return (
     <div className="w-full h-screen  relative overflow-x-hidden">
