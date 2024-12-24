@@ -47,7 +47,7 @@ const Services = () => {
   const isInView = useInView(ref, { once: true });
   return (
     <section
-      className="py-20 sm:pb-20 sm:pt-40 bg-gray-50 dark:bg-gray-900"
+      className="py-20 sm:pb-20 sm:pt-40 bg-gray-50 dark:bg-black"
       id="services"
     >
       <div className="container mx-auto px-6 text-center">

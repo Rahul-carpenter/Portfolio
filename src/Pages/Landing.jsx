@@ -13,6 +13,7 @@ import { FaArrowRight } from "react-icons/fa6";
 import { MdMenuOpen } from "react-icons/md";
 import { MdOutlineMenu } from "react-icons/md";
 import { CgDarkMode } from "react-icons/cg";
+import { MdKeyboardDoubleArrowUp } from "react-icons/md";
 
 const Landing = () => {
   // dark mode / light mode implementations
@@ -53,13 +54,13 @@ const Landing = () => {
   };
 
   return (
-    <div className="w-full h-screen  relative overflow-x-hidden">
-      <nav className="bg-white dark:bg-black sticky top-0 z-[9999]">
+    <div className="w-full h-max  relative overflow-x-hidden">
+      <nav className="bg-white dark:bg-[#101010]  w-full z-[9999] fixed top-0">
         <div className="Navbar w-full h-[80px] flex justify-between items-center px-10 relative z-[999]">
           <div className="Logo text-5xl sm:text-6xl flex items-center dark:text-white pb-4">
             manish
           </div>
-          <div className="navLinks md:flex items-center gap-5 lg:gap-10 hidden  lg:text-lg dark:text-white mt-5">
+          <div className="navLinks md:flex items-center gap-5 lg:gap-10 hidden lg:text-lg dark:text-white ">
             <a href="#about" className="hover:text-[#4e43ca]">
               About me
             </a>
@@ -70,18 +71,20 @@ const Landing = () => {
               Contact
             </Link>
           </div>
-          <div className="mode md:flex items-center gap-5 hidden px-4 py-2 rounded-full mt-5">
+          <div className="mode md:flex items-center gap-5 hidden px-4 py-2 rounded-full ">
             <div
               onClick={toggleDarkMode}
               className="chageMode hover:bg-[#a5a5a5] hover:dark:bg-[#41410b] p-2 rounded-full cursor-pointer"
             >
               <CgDarkMode className="text-black dark:text-white text-lg sm:text-xl md:text-2xl " />
             </div>
-            <div className="flex items-center gap-2 bg-gray-600 hover:bg-gray-700 dark:bg-[#4e43ca] dark:hover:bg-[#1f1777] px-2 py-1 rounded-xl text-white">
+            <div className="group cursor-pointer slide-anime px-5 py-3 rounded-full  dark:bg-gradient-to-r from-slate-800 to-slate-900 bg-[#1f2937] text-white dark:text-white flex gap-5 items-center font-semibold ">
               <Link to={"/contact-form"} className=" ">
                 Let's Work
               </Link>
-              <FaArrowRight className={``} />
+              <FaArrowRight
+                className={`group-hover:translate-x-2 transition-all`}
+              />
             </div>
           </div>
           <div className="hamburger md:hidden text-2xl dark:text-white flex items-center gap-5">
@@ -93,7 +96,7 @@ const Landing = () => {
           <div
             className={`menu w-full h-screen  ${
               menuOpen === true ? "scale-y-[1]" : " scale-y-0"
-            } flex items-center flex-col gap-5 absolute left-0 top-[0] bg-[#ffffffec] dark:bg-[#000000ee] ease-in duration-150 `}
+            } flex items-center flex-col gap-5 absolute left-0 top-[0] bg-[#ffffff] dark:bg-[#000000] ease-in duration-150 `}
           >
             <div className="closeMenu w-full px-10 dark:text-white h-[80px] text-2xl text-left  flex items-center pb-5 justify-end gap-10">
               <MdMenuOpen onClick={toggleMenu} />
@@ -126,6 +129,14 @@ const Landing = () => {
           </div>
         </div>
       </nav>
+      <div className="bg-white border rounded-full w-max dark:bg-black  z-[99999] fixed top-[600px] right-5">
+        <a href="#hero" className="">
+          <div className=" p-3 text-white">
+            <MdKeyboardDoubleArrowUp />
+          </div>
+        </a>
+      </div>
+
       <Hero />
       <About />
       <Skills />

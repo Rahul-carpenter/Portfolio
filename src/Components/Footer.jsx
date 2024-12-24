@@ -1,5 +1,5 @@
 import React from "react";
-import { MdKeyboardDoubleArrowUp } from "react-icons/md";
+
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { BsLinkedin } from "react-icons/bs";
 import { FaSquareGithub } from "react-icons/fa6";
@@ -9,16 +9,8 @@ const Footer = () => {
   return (
     <section
       id="footer"
-      className="w-full min-h-[200px] py-5 bg-gradient-to-b from-slate-950 to-black"
+      className="w-full min-h-[200px] py-5 bg-gradient-to-b from-black to-gray-900"
     >
-      <div className="flex justify-center text-white ">
-        <a href="#hero" className="flex flex-col items-center gap-2">
-          <span>
-            <MdKeyboardDoubleArrowUp />
-          </span>
-          <span>Back to Top</span>
-        </a>
-      </div>
       <div className="flex gap-4 justify-center text-white my-5 text-4xl ">
         <a
           href="https://www.linkedin.com/in/manishdev21/"

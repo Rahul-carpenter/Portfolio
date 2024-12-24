@@ -40,7 +40,7 @@ const Work = () => {
   return (
     <section
       id="project"
-      className="w-full min-h-screen dark:bg-gradient-to-b from-slate-950 via-slate-950 to-slate-900 py-20 sm:pt-40"
+      className="w-full min-h-screen dark:bg-[#000] to-slate-900 py-20 sm:pt-40"
     >
       <div className="w-[90%] sm:w-[80%] md:w-[90%] mx-auto md:p-5 ">
         <motion.div

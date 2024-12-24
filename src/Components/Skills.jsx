@@ -41,21 +41,8 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="w-full min-h-screen bg-white dark:bg-[#030d2b] py-20 pt-40 sm:pt-60 relative"
+      className="w-full min-h-screen bg-white dark:bg-[#000] py-20 pt-40 sm:pt-60 relative"
     >
-      <div class="custom-shape-divider-top-1731752618">
-        <svg
-          data-name="Layer 1"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1200 120"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M602.45,3.86h0S572.9,116.24,281.94,120H923C632,116.24,602.45,3.86,602.45,3.86Z"
-            class="shape-fill fill-white dark:fill-[#1b2237]"
-          ></path>
-        </svg>
-      </div>
       <div className="w-full md:w-[90%] mx-auto md:p-5 ">
         <motion.div
           ref={ref}

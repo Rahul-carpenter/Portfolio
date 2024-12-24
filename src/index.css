@@ -38,80 +38,13 @@ input:-webkit-autofill {
 .secHead {
   transform-origin: left;
 }
-.custom-shape-divider-top-1731323367 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-}
-
-.custom-shape-divider-top-1731323367 svg {
-  position: relative;
-  display: block;
-  width: calc(159% + 1.3px);
-  height: 183px;
-}
+/*  */
 
 .byCoffee,
 .hireMe {
   font-family: "Montserrat", sans-serif;
 }
 
-.custom-shape-divider-top-1731476873 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-}
-
-.custom-shape-divider-top-1731476873 svg {
-  position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 70px;
-  transform: rotateY(180deg);
-}
-
-/** For mobile devices **/
-@media (max-width: 767px) {
-  .custom-shape-divider-top-1731476873 svg {
-    width: calc(100% + 1.3px);
-    height: 53px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .leadingP {
-    line-height: 35px !important;
-  }
-}
-
-.custom-shape-divider-top-1731752618 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  transform: rotate(180deg);
-}
-
-.custom-shape-divider-top-1731752618 svg {
-  position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 70px;
-}
-
-.custom-shape-divider-top-1731752618 .shape-fill {
-  fill: #ffffff;
-}
-
-.skillCard:hover {
-  transform: scale(1.05) !important;
-  transition-duration: 0ms !important;
+.radio-service {
+  opacity: 0% !important ;
 }

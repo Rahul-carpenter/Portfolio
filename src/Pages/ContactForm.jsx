@@ -35,7 +35,7 @@ const ContactForm = () => {
   // Form submission handling
 
   return (
-    <div className="form-container w-full min-h-screen bg-[#2e0249]">
+    <div className="form-container w-full min-h-screen bg-[#000]">
       <div className="w-full h-full sm:w-[80%]  py-5 sm:py-10 md:py-10  mx-auto lg:flex gap-10 px-5  ">
         <div className="sidebar w-full  lg:w-[40%] py-5 md:py-10  text-white sm:text-lg">
           <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold">
@@ -69,7 +69,7 @@ const ContactForm = () => {
             </a>
           </div>
         </div>
-        <div className="formContainer w-full lg:w-[60%]  rounded-xl bg-[#f3f4f6] py-5 border-t-[10px] border-blue-500 p-5">
+        <div className="formContainer w-full lg:w-[60%]  rounded-xl bg-[white] py-5 border-t-[10px] border-blue-500 p-5">
           {/* Contact form */}
           <form action="https://formspree.io/f/xbljkjjo" method="POST">
             <header className="text-3xl font-semibold text-center my-5">
@@ -89,12 +89,12 @@ const ContactForm = () => {
                   Website Development
                 </label>
                 <input
+                  className="radio-service"
                   onClick={(e) => handleChecked(e)}
                   type="radio"
                   name="services"
                   id="webDevelopment"
                   value={"website-development"}
-                  hidden
                   required
                 />
               </div>
@@ -110,12 +110,12 @@ const ContactForm = () => {
                   Website Design
                 </label>
                 <input
+                  className="radio-service"
                   onClick={(e) => handleChecked(e)}
                   type="radio"
                   name="services"
                   id="webDesign"
                   value={"website-design"}
-                  hidden
                   required
                 />
               </div>

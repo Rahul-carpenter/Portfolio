@@ -2,7 +2,7 @@ import React from "react";
 
 const Thanks = () => {
   return (
-    <div className="bg-gray-600 dark:bg-gray-800 text-white">
+    <div className="bg-gray-600 dark:bg-[#000] text-white">
       <div className="max-w-[1000px]  py-5 sm:py-10 mx-auto">
         <div className="text-center text-lg sm:text-xl md:text-3xl lg:text-4xl font-semibold my-5">
           " Thanks for Scrolling! "
