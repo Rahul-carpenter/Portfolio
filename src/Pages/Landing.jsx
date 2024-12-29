@@ -55,8 +55,8 @@ const Landing = () => {
 
   return (
     <div className="w-full h-max  relative overflow-x-hidden">
-      <nav className="bg-white dark:bg-[#101010]  w-full z-[9999] fixed top-0">
-        <div className="Navbar w-full h-[80px] flex justify-between items-center px-10 relative z-[999]">
+      <nav className="bg-white dark:bg-[#101010]  w-full z-[999999] fixed top-0">
+        <div className="Navbar w-full h-[80px] flex justify-between items-center px-10 relative z-[99999999]">
           <div className="Logo text-5xl sm:text-6xl flex items-center dark:text-white pb-4">
             manish
           </div>
@@ -132,7 +132,7 @@ const Landing = () => {
           </div>
         </div>
       </nav>
-      <div className=" border rounded-full w-max bg-black  z-[99999] fixed top-[600px] right-5">
+      <div className=" border rounded-full w-max bg-black  z-[999] fixed top-[600px] right-5">
         <a href="#hero" className="">
           <div className=" p-3 text-white">
             <MdKeyboardDoubleArrowUp />
