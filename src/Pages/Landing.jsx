@@ -13,7 +13,6 @@ import { FaArrowRight } from "react-icons/fa6";
 import { MdMenuOpen } from "react-icons/md";
 import { MdOutlineMenu } from "react-icons/md";
 import { CgDarkMode } from "react-icons/cg";
-import { MdKeyboardDoubleArrowUp } from "react-icons/md";
 
 const Landing = () => {
   // dark mode / light mode implementations
@@ -100,7 +99,7 @@ const Landing = () => {
           >
             <div className="closeMenu w-full px-10 dark:text-white h-[80px] text-2xl text-left  flex items-center pb-5 justify-end gap-10">
               <MdMenuOpen
-                className="text-2xl text-teal-700"
+                className="text-3xl text-teal-700 mt-5"
                 onClick={toggleMenu}
               />
             </div>
@@ -132,13 +131,6 @@ const Landing = () => {
           </div>
         </div>
       </nav>
-      <div className=" border rounded-full w-max bg-black  z-[999] fixed top-[600px] right-5">
-        <a href="#hero" className="">
-          <div className=" p-3 text-white">
-            <MdKeyboardDoubleArrowUp />
-          </div>
-        </a>
-      </div>
 
       <Hero />
       <About />
