@@ -99,7 +99,7 @@ const Landing = () => {
           >
             <div className="closeMenu w-full px-10 dark:text-white h-[80px] text-2xl text-left  flex items-center pb-5 justify-end gap-10">
               <MdMenuOpen
-                className="text-3xl text-teal-700 mt-5"
+                className="text-3xl text-white mt-5"
                 onClick={toggleMenu}
               />
             </div>
