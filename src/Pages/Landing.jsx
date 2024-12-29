@@ -129,7 +129,7 @@ const Landing = () => {
           </div>
         </div>
       </nav>
-      <div className="bg-white border rounded-full w-max dark:bg-black  z-[99999] fixed top-[600px] right-5">
+      <div className=" border rounded-full w-max bg-black  z-[99999] fixed top-[600px] right-5">
         <a href="#hero" className="">
           <div className=" p-3 text-white">
             <MdKeyboardDoubleArrowUp />
