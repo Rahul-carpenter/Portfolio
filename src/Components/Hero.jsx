@@ -31,10 +31,10 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="w-full h-max min-[1025px]:min-h-screen bg-white dark:bg-gradient-to-b from-[#101010] to-[#030303] overflow-hidden "
+      className="w-full h-max min-[1025px]:min-h-screen bg-white dark:bg-gradient-to-b from-[#101010] to-[#030303] overflow-hidden py-10"
     >
       <div className="Container max-w-[1200px] mx-auto ">
-        <div className=" flex justify-center my-10 sm:mt-36 ">
+        <div className=" flex justify-center my-20 sm:mt-36 ">
           <motion.div
             initial="initial"
             whileHover="hovered"

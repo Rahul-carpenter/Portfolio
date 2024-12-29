@@ -38,7 +38,7 @@ const Footer = () => {
           <IoMdMail />
         </a>
       </div>
-      <div className="flex gap-4 justify-center text-gray-400 my-5  ">
+      <div className="flex gap-4 justify-center text-gray-400  ">
         © 2024 | Manish.Dev
       </div>
     </section>

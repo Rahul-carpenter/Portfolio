@@ -41,7 +41,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="w-full min-h-screen bg-white dark:bg-[#000] py-20 pt-40 sm:pt-60 relative"
+      className="w-full min-h-screen bg-white dark:bg-[#000] pt-20 sm:pt-32 lg:pt-40 relative"
     >
       <div className="w-full md:w-[90%] mx-auto md:p-5 ">
         <motion.div

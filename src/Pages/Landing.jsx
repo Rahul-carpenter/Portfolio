@@ -24,9 +24,9 @@ const Landing = () => {
     if (storedTheme) {
       return storedTheme === "dark"; // Return true if 'dark', false otherwise
     }
-    // If no theme is set, default to light mode
+    // If no theme is set, default to dark mode
     localStorage.setItem("theme", "dark");
-    return false; // Default is light mode
+    return true; // Default to dark mode
   });
 
   // Apply the theme on initial load
@@ -99,7 +99,10 @@ const Landing = () => {
             } flex items-center flex-col gap-5 absolute left-0 top-[0] bg-[#ffffff] dark:bg-[#000000] ease-in duration-150 `}
           >
             <div className="closeMenu w-full px-10 dark:text-white h-[80px] text-2xl text-left  flex items-center pb-5 justify-end gap-10">
-              <MdMenuOpen onClick={toggleMenu} />
+              <MdMenuOpen
+                className="text-2xl text-teal-700"
+                onClick={toggleMenu}
+              />
             </div>
             <div className="menuItems flex flex-col gap-5 text-center dark:text-white">
               <a
