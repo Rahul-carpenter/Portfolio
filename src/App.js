@@ -1,16 +1,18 @@
 import React from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Layout from "./Components/Layout";
+// import Layout from "./Components/Layout";
 import Blogs from "./Pages/Blogs";
 import Landing from "./Pages/Landing";
 import ProgressDashboard from "./Pages/ProgressDashboard";
 import ContactForm from "./Pages/ContactForm";
+import Maintenance from "./Components/Maintenance";
 
 const App = () => {
   const routes = createBrowserRouter([
     {
       path: "",
-      element: <Layout />,
+      element: <Maintenance />,
+      //   element: <Layout />,
       children: [
         { path: "/", element: <Landing /> },
         { path: "/blog", element: <Blogs /> },
