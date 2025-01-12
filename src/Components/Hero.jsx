@@ -7,27 +7,7 @@ import { PiReadCvLogo } from "react-icons/pi";
 import { IoRocketOutline } from "react-icons/io5";
 
 const Hero = () => {
-  // days counter
-
-  const [days, setDays] = useState(0);
-
-  useEffect(() => {
-    // Define the start date
-    const startDate = new Date("2022-09-01");
-    const today = new Date();
-
-    // Calculate the difference in time
-    const differenceInTime = today - startDate;
-
-    // Convert time difference to days
-    const differenceInDays = Math.floor(
-      differenceInTime / (1000 * 60 * 60 * 24)
-    );
-    setDays(differenceInDays);
-  }, []); // Empty dependency array ensures this runs only once on mount
-
-  // Menu toggle handling
-
+  const opacity = 0.06;
   return (
     <section
       id="hero"
@@ -56,38 +36,19 @@ const Hero = () => {
         <div className="flex justify-center text-3xl sm:text-5xl dark:text-white font-bold ">
           <motion.div
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0 }}
+            animate={{ scale: [1, 1, 1.5], opacity: 1 }}
+            transition={{ duration: 1 }}
             className="flex items-center space-x-2"
           >
-            Hello World!
-            <motion.span
-              animate={{
-                rotate: [0, 20, -20, 20, -20, 0],
-              }}
-              transition={{
-                repeat: Infinity,
-                repeatType: "loop",
-                duration: 1.5,
-                ease: "easeInOut",
-              }}
-              className="text-3xl sm:text-5xl pb-2"
-            >
-              👋
-            </motion.span>
+            Manish Meena
           </motion.div>
         </div>
         <div className="w-[90%] sm:w-[70%] mx-auto flex justify-center text-xl sm:text-2xl dark:text-white leading-8 sm:leading-10 text-center mt-10">
-          I'm Manish. A Developer, Programmer, Future Founder, Freelancer and a
-          Techie who build beautiful websites and talk about tech.
+          I'm Web Developer, building websites and helping individuals to grow
+          their businesses and personal branding. <br /> Now it's your turn to
+          take your business to the next level.
         </div>
-        <div className="w-[90%] sm:w-[70%]  mx-auto sm:text-xl dark:text-white  text-center mt-10">
-          It's been
-          <span className=" mx-2 rounded-lg  font-bold underline text-yellow-500 hover:text-black dark:hover:text-white">
-            {days}
-          </span>
-          days since I started coding.
-        </div>
+
         <div className="flex justify-center gap-10 mt-10">
           <Link
             to={"/contact-form"}

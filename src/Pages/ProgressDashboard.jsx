@@ -261,7 +261,7 @@ const ProgressDashboard = () => {
         </div>
 
         <div className="countdown bg-gradient-to-r from-slate-800 via-slate-950 to-slate-800 text-white py-5 text-center rounded">
-          <h1 className="text-xl font-bold mb-6">Challenge will start in</h1>
+          <h1 className="text-xl font-bold mb-6">Challenge will ends in</h1>
           <div className="flex justify-center gap-4 text-xl">
             {Object.entries(timeLeft).map(([key, value]) => (
               <div key={key} className="flex flex-col items-center">

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 
 import { FaGithub, FaSquareXTwitter } from "react-icons/fa6";
@@ -12,6 +12,25 @@ import { Link } from "react-router-dom";
 const About = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
+
+  // days counter
+
+  const [days, setDays] = useState(0);
+
+  useEffect(() => {
+    // Define the start date
+    const startDate = new Date("2022-09-01");
+    const today = new Date();
+
+    // Calculate the difference in time
+    const differenceInTime = today - startDate;
+
+    // Convert time difference to days
+    const differenceInDays = Math.floor(
+      differenceInTime / (1000 * 60 * 60 * 24)
+    );
+    setDays(differenceInDays);
+  }, []); // Empty dependency array ensures this runs only once on mount
 
   return (
     <section
@@ -40,6 +59,7 @@ const About = () => {
           <p className="my-5 sm:my-10 sm:text-lg md:text-xl leadingP">
             Welcome to my corner of the Internet.
           </p>
+          <p className="my-5 sm:my-10 sm:text-lg md:text-xl leadingP">{days}</p>
           <p className="my-5 sm:my-10 sm:text-lg md:text-xl leadingP ">
             I'm all about creating websites—whether it's for businesses,
             portfolio, or landing pages. If it's on the web, I'm probably
