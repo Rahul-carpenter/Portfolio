@@ -1,73 +1,113 @@
-import React, { useEffect, useState } from "react";
-import { IoRocketOutline } from "react-icons/io5";
+import React, { useState } from "react";
+import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
   // / dark mode / light mode implementations
 
-  const [isDarkMode, setIsDarkMode] = useState(() => {
-    // Check local storage for theme preference
-    const storedTheme = localStorage.getItem("theme");
-    if (storedTheme) {
-      return storedTheme === "dark"; // Return true if 'dark', false otherwise
-    }
-    // If no theme is set, default to dark mode
-    localStorage.setItem("theme", "dark");
-    return true; // Default to dark mode
-  });
+  //   const [isDarkMode, setIsDarkMode] = useState(() => {
+  //     // Check local storage for theme preference
+  //     const storedTheme = localStorage.getItem("theme");
+  //     if (storedTheme) {
+  //       return storedTheme === "dark"; // Return true if 'dark', false otherwise
+  //     }
+  //     // If no theme is set, default to dark mode
+  //     localStorage.setItem("theme", "dark");
+  //     return true; // Default to dark mode
+  //   });
 
-  // Apply the theme on initial load
-  useEffect(() => {
-    const root = document.documentElement;
-    if (isDarkMode) {
-      root.classList.add("dark");
-    } else {
-      root.classList.remove("dark");
-    }
-  }, [isDarkMode]);
+  //   // Apply the theme on initial load
+  //   useEffect(() => {
+  //     const root = document.documentElement;
+  //     if (isDarkMode) {
+  //       root.classList.add("dark");
+  //     } else {
+  //       root.classList.remove("dark");
+  //     }
+  //   }, [isDarkMode]);
 
-  // Toggle the dark mode and save to localStorage
-  const toggleDarkMode = () => {
-    setIsDarkMode((prev) => {
-      const newMode = !prev;
-      localStorage.setItem("theme", newMode ? "dark" : "light");
-      return newMode;
-    });
+  //   // Toggle the dark mode and save to localStorage
+  //   const toggleDarkMode = () => {
+  //     setIsDarkMode((prev) => {
+  //       const newMode = !prev;
+  //       localStorage.setItem("theme", newMode ? "dark" : "light");
+  //       return newMode;
+  //     });
+  //   };
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
   return (
     <div>
-      <nav className="max-w-[1000px] mx-auto bg-black dark:bg-white flex justify-between items-center rounded-full px-5 py-2">
-        <div className="navLinks w-full px-5 flex gap-5 text-lg font-semibold  justify-between items-center">
-          <a
-            href="#about"
-            className="text-white dark:text-[#000000b9]  dark:hover:text-[#000000] "
+      <nav className=" max-w-[1200px] mx-auto relative ">
+        <div className="flex items-center justify-between bg-white my-5 rounded-full px-6 py-3">
+          <div className="hidden md:flex items-center space-x-8">
+            <a href="#about" className="hover:opacity-80">
+              About me
+            </a>
+            <a href="#projects" className="hover:opacity-80">
+              Projects
+            </a>
+          </div>
+          <Link to={"/"} className="text-xl font-bold">
+            Manish
+          </Link>
+          <div className="hidden md:flex items-center space-x-8">
+            <Link to="/blog" className="hover:opacity-80">
+              Blogs
+            </Link>
+            <a
+              href="#contact"
+              className="bg-black text-white px-4 py-2 rounded-full hover:opacity-90"
+            >
+              Let's work
+            </a>
+          </div>
+          <button
+            className="md:hidden p-2 hover:opacity-80"
+            onClick={toggleMenu}
+            aria-label="Toggle menu"
           >
-            About Me
-          </a>
-          <a
-            href="#projects"
-            className="text-white dark:text-[#000000b9] dark:hover:text-[#000000] "
-          >
-            Projects
-          </a>
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
-        <div className="logo w-full px-5 flex justify-center items-center text-xl sm:text-2xl md:text-3xl font-bold">
-          MANISH
-        </div>
-        <div className="navLinks w-full flex justify-between items-center gap-5 px-5">
-          <a
-            href="#about"
-            className="text-white text-xl font-semibold  dark:text-[#000000b9] dark:hover:text-[#000000]  "
-          >
-            Contact
-          </a>
-          <a
-            href="#_"
-            class="block py-2  text-white bg-gray-800 px-5 hover:bg-gray-900 rounded-full"
-          >
-            Let's Work
-          </a>
-        </div>
+
+        {/* MObile Menu */}
+        {isMenuOpen && (
+          <div className="absolute top-full left-0 right-0 mt-2 bg-white text-black rounded-3xl p-4 shadow-lg md:hidden">
+            <div className="flex flex-col space-y-4">
+              <a
+                href="#about"
+                className="hover:opacity-80 px-4 py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                About me
+              </a>
+              <a
+                href="#projects"
+                className="hover:opacity-80 px-4 py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Projects
+              </a>
+              <Link
+                to="/blog"
+                className="hover:opacity-80 px-4 py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Blogs
+              </Link>
+              <a
+                href="#contact"
+                className="bg-black text-white px-4 py-2 rounded-full hover:opacity-90 text-center"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Let's work
+              </a>
+            </div>
+          </div>
+        )}
       </nav>
     </div>
   );

@@ -1,16 +1,9 @@
-import React, { useRef, useState } from "react";
-import { motion, useInView } from "framer-motion";
+import React from "react";
 
 import { SiGithub } from "react-icons/si";
 import { HiExternalLink } from "react-icons/hi";
 
 const Work = () => {
-  const ref = useRef(null);
-  const projectref = useRef(null);
-  const isProjectInView = useInView(projectref, { once: true });
-  const isInView = useInView(ref, { once: true });
-  const [hoverIndex, sethoverIndex] = useState(null);
-
   const Projects = [
     {
       title: "Portfolio Website",
@@ -37,58 +30,62 @@ const Work = () => {
       img: "./img/dsns.png",
     },
   ];
+  //   const projects = [
+  //     {
+  //       id: 1,
+  //       title: 'Portfolio Website',
+  //       description:
+  //         'A full-featured e-commerce dashboard with real-time analytics, inventory management, and order processing.',
+  //       image:
+  //         'https://github.com/ManishDev20/Portfolio',
+  //       github: 'https://github.com',
+  //       live: 'https://example.com',
+  //     },
+  //     {
+  //       id: 2,
+  //       title: 'Social Media Platform',
+  //       description:
+  //         'Modern social media platform built with React and Node.js, featuring real-time messaging and content sharing.',
+  //       image:
+  //         'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop',
+  //       github: 'https://github.com',
+  //       live: 'https://example.com',
+  //     },
+  //     {
+  //       id: 3,
+  //       title: 'Task Management App',
+  //       description:
+  //         'Collaborative task management application with team features, deadlines, and progress tracking.',
+  //       image:
+  //         'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2340&auto=format&fit=crop',
+  //       github: 'https://github.com',
+  //       live: 'https://example.com',
+  //     },
+  //   ]
   return (
     <section
-      id="project"
-      className="w-full min-h-screen dark:bg-[#000] to-slate-900 py-20 sm:pt-40"
+      id="projects"
+      className="max-w-[1200px] mx-auto h-max rounded-xl my-5 bg-white py-10 "
     >
-      <div className="w-[90%] sm:w-[80%] md:w-[90%] mx-auto md:p-5 ">
-        <motion.div
-          ref={ref}
-          style={{
-            translateY: isInView ? "-100%" : 0,
-            opacity: isInView ? 1 : 0,
-            transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
-          }}
-          className="secHead flex justify-center px-3 my-5 relative"
-        >
-          <div
-            id="workH"
-            className="z-10 w-max text-2xl sm:text-4xl md:text-5xl  font-extrabold dark:text-white "
-          >
-            WORK
-          </div>
-          <div className="z-0 text-[#9a9a9a25] -top-6 sm:-top-10 md:-top-16 absolute text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold ">
-            PROJECTS
-          </div>
-        </motion.div>
-        <div className="w-full text-center dark:text-white text-lg sm:text-xl md:text-2xl">
+      <div className=" mx-auto md:p-5 overflow-hidden ">
+        <h2 className="text-5xl font-bold text-gray-300  uppercase px-2 text-center">
+          My Projects
+        </h2>
+
+        <div className="w-full text-center dark:text-white text-lg  my-5 px-4 sm:px-10 ">
           Explore a collection of my projects, showcasing skills in development,
           design, and problem-solving through personal projects and creativity.
         </div>
-        <motion.div
-          ref={projectref}
-          style={{
-            left: isProjectInView ? 0 : "-100%",
-            opacity: isProjectInView ? 1 : 0,
-            transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
-          }}
-          className="w-full h-max sm:w-[90%] mx-auto p-5 mt-5 sm:mt-20 grid gap-5 grid-cols-2 sm:grid-cols-4 md:grid-cols-8 lg:grid-cols-12 relative duration-75 "
-        >
+        <div className="w-full h-max sm:w-[90%] mx-auto p-5 grid gap-5 grid-cols-2 sm:grid-cols-4 md:grid-cols-8 lg:grid-cols-12 relative duration-75 ">
           {Projects.map((project, i) => {
             return (
-              <motion.div
+              <div
                 key={i}
-                // set hover-index to the current project (Current item of Projects) index.
-                onMouseEnter={() => sethoverIndex(i)}
-                // Reset it to null on mouseleave.
-                onMouseLeave={() => sethoverIndex(null)}
                 className={`w-full h-max  col-span-2 sm:cols-span-2 md:col-span-4 lg:col-span-6  relative border-2 rounded-lg`}
               >
                 <div
-                  className={` ${
-                    hoverIndex === i ? "block" : "hidden" //  hovered item with its own index will only show.
-                  } w-full h-full absolute z-10 bg-black p-4 rounded-lg flex flex-col gap-5 md:gap-10 items-center justify-center `}
+                  className="
+                   w-full h-full absolute z-10 bg-black hover:opacity-[90%] opacity-0 p-4 rounded-lg flex flex-col gap-5 md:gap-10 items-center justify-center "
                 >
                   <h1 className=" w-full text-yellow-500  font-bold text-[16px] sm:text-lg md:text-xl lg:text-2xl break-words text-center">
                     {project.title}
@@ -115,10 +112,10 @@ const Work = () => {
                   alt=""
                   className="w-[600px] h-[300px] rounded-lg z-0"
                 />
-              </motion.div>
+              </div>
             );
           })}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

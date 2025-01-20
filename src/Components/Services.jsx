@@ -1,5 +1,5 @@
-import React, { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import React from "react";
+import { motion } from "framer-motion";
 import {
   FaCode,
   FaTools,
@@ -43,39 +43,21 @@ const Services = () => {
     },
   ];
 
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
   return (
     <section
-      className="py-20 sm:pb-20 sm:pt-40 bg-gray-50 dark:bg-black"
+      className="max-w-[1200px] mx-auto rounded-3xl py-10 sm:py-20 px-4 sm:px-10 bg-gray-50 dark:bg-black"
       id="services"
     >
-      <div className="container mx-auto px-6 text-center">
-        <motion.div
-          ref={ref}
-          style={{
-            translateY: isInView ? "-100%" : 0,
-            opacity: isInView ? 1 : 0,
-            transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
-          }}
-          className="secHead flex justify-center px-3 my-5 relative"
-        >
-          <div
-            id="workH"
-            className="z-10 w-max text-xl sm:text-3xl md:text-4xl  font-bold dark:text-white "
-          >
-            My Services
-          </div>
-          <div className="z-0 text-[#5e5e5e25] dark:text-[#5e5e5e67] -top-6 sm:-top-10 md:-top-16 absolute text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold ">
-            SERVICES
-          </div>
-        </motion.div>
+      <div className="container mx-auto px-2 sm:px-6 text-center">
+        <h2 className="text-5xl font-bold text-gray-300 mb-10 md:mb-20 uppercase text-center">
+          Services
+        </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <motion.div
               key={index}
-              whileHover={{ scale: 1.1 }}
+              whileHover={{ scale: 1.05 }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}

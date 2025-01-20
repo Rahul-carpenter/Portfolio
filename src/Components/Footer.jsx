@@ -1,58 +1,133 @@
 import React from "react";
-
-import { FaSquareXTwitter } from "react-icons/fa6";
-import { BsLinkedin } from "react-icons/bs";
-import { FaSquareGithub } from "react-icons/fa6";
+import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
-import { MdKeyboardDoubleArrowUp } from "react-icons/md";
 
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
-    <section
-      id="footer"
-      className="w-full min-h-[200px] py-5 bg-gradient-to-b from-black to-gray-900"
-    >
-      <div className="flex justify-center md:justify-end px-20">
-        <div className=" border rounded-full w-max bg-black  z-[999]  ">
-          <a href="#hero" className="">
-            <div className=" p-3 text-white">
-              <MdKeyboardDoubleArrowUp />
-            </div>
-          </a>
+    <footer className="max-w-[1200px] mx-auto bg-white text-black rounded-3xl p-8 my-5">
+      <div className="grid md:grid-cols-4 gap-8 mb-8">
+        {/* Brand Section */}
+        <div className="space-y-4">
+          <h3 className="text-xl font-bold">Manish</h3>
+          <p className="text-gray-600 text-sm">
+            Full Stack Developer specializing in creating beautiful and
+            functional web applications.
+          </p>
+          <div className="flex gap-4">
+            <a
+              href="https://github.com/manishdev20"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-80"
+              aria-label="GitHub"
+            >
+              <FaGithub size={20} />
+            </a>
+            <a
+              href="https://linkedin.com/in/ManishDev21"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-80"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedin size={20} />
+            </a>
+            <a
+              href="https://twitter.com/manishdev21"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-80"
+              aria-label="Twitter"
+            >
+              <FaTwitter size={20} />
+            </a>
+            <a
+              href="https://instagram.com/potentweb25"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-80"
+              aria-label="Instagram"
+            >
+              <FaInstagram size={20} />
+            </a>
+          </div>
+        </div>
+        {/* Quick Links */}
+        <div className="space-y-4">
+          <h3 className="text-lg font-bold">Quick Links</h3>
+          <ul className="space-y-2">
+            <li>
+              <a href="#_" alt="" className="text-gray-600 hover:text-black">
+                Home
+              </a>
+            </li>
+            <li>
+              <a
+                href="#about"
+                alt=""
+                className="text-gray-600 hover:text-black"
+              >
+                About
+              </a>
+            </li>
+            <li>
+              <a
+                href="#projects"
+                alt=""
+                className="text-gray-600 hover:text-black"
+              >
+                Projects
+              </a>
+            </li>
+            <li>
+              <a
+                href="#contact"
+                alt=""
+                className="text-gray-600 hover:text-black"
+              >
+                Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+        {/* Services */}
+        <div className="space-y-4">
+          <h3 className="text-lg font-bold">Services</h3>
+          <ul className="space-y-2">
+            <li className="text-gray-600">Web Development</li>
+            <li className="text-gray-600">Web Design</li>
+            <li className="text-gray-600">Logo Design</li>
+            <li className="text-gray-600">UI/UX Design</li>
+          </ul>
+        </div>
+        {/* Contact Info */}
+        <div className="space-y-4">
+          <h3 className="text-lg font-bold">Contact Info</h3>
+          <div className="space-y-2">
+            <a
+              href="mailto:contact@example.com"
+              className="flex items-center gap-2 text-gray-600 hover:text-black"
+            >
+              <IoMdMail /> potentweb25official@gmail.com
+            </a>
+          </div>
         </div>
       </div>
-
-      <div className="flex gap-4 justify-center text-white my-5 text-4xl ">
-        <a
-          href="https://www.linkedin.com/in/manishdev21/"
-          className="flex flex-col items-center gap-2 hover:text-blue-500"
-        >
-          <BsLinkedin />
-        </a>
-        <a
-          href="https://github.com/manishdev20"
-          className="flex flex-col items-center gap-2 hover:text-blue-500"
-        >
-          <FaSquareGithub />
-        </a>
-        <a
-          href="https://x.com/Manishdev21"
-          className="flex flex-col items-center gap-2 hover:text-blue-500"
-        >
-          <FaSquareXTwitter />
-        </a>
-
-        <a
-          href="mailto:manishdev21@gmail.com"
-          className="flex flex-col items-center gap-2 hover:text-blue-500"
-        >
-          <IoMdMail />
-        </a>
+      {/* Copyright */}
+      <div className="pt-8 mt-8 border-t border-gray-200">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-gray-600 text-sm">
+            © {new Date().getFullYear()} Manish. All rights reserved.
+          </p>
+          <div className="flex gap-4 text-sm">
+            <Link to="/privacy" className="text-gray-600 hover:text-black">
+              Terms & Policy
+            </Link>
+          </div>
+        </div>
       </div>
-      <div className="flex gap-4 justify-center text-gray-400  ">
-        © 2024 | Manish.Dev
-      </div>
-    </section>
+    </footer>
   );
 };
 

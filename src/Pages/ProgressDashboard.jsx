@@ -202,10 +202,7 @@ const ProgressDashboard = () => {
         </div>
 
         <div className="my-5 text-center text-white text-lg sm:text-xl md:text-2xl">
-          Each Square Represents{" "}
-          <span className="text-blue-500 border-b-2 border-blue-500">
-            1,000
-          </span>{" "}
+          Each Square Represents <span className="text-blue-500 ">1,000</span>{" "}
           Rupees.
         </div>
 
@@ -251,11 +248,11 @@ const ProgressDashboard = () => {
 
         <div className="w-full flex justify-between items-center my-5">
           <div className="flex items-center gap-2">
-            <span className="font-semibold text-white">Deadline:</span>
+            <span className="font-semibold text-white">Ends on:</span>
             <span className="text-gray-400">31 December, 2025</span>
           </div>
           <div className="flex items-center gap-2">
-            <span className="font-semibold text-white">Update:</span>
+            <span className="font-semibold text-white">Last Update:</span>
             <span className="text-gray-400">13 November, 2024</span>
           </div>
         </div>
