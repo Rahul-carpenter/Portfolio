@@ -2,7 +2,8 @@ import React from "react";
 
 import { Globe2, PenTool } from "lucide-react";
 import { Link } from "react-router-dom";
-import { FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa6";
+import { FaLinkedin, FaTwitter } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa";
 
 const About = () => {
   //   const ref = useRef(null);
@@ -45,24 +46,42 @@ const About = () => {
           <div className="bg-black text-white rounded-2xl p-6">
             <h3 className="text-xl mb-4">Connect</h3>
             <div className="space-y-3">
-              <div className="flex items-center gap-2 hover:text-blue-500 cursor-pointer">
+              <a
+                href="https://github.com/manishdev20"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                className="flex items-center gap-2 hover:text-blue-500 cursor-pointer"
+              >
                 <span>
-                  <FaTwitter />
+                  <FaGithub />
                 </span>
-                <span>Twitter</span>
-              </div>
-              <div className="flex items-center gap-2 hover:text-blue-500 cursor-pointer">
+                <span>GitHub</span>
+              </a>
+              <a
+                href="https://linkedin.com/in/ManishDev21"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="flex items-center gap-2 hover:text-blue-500 cursor-pointer"
+              >
                 <span>
                   <FaLinkedin />
                 </span>
                 <span>LinkedIn</span>
-              </div>
-              <div className="flex items-center gap-2 hover:text-blue-500 cursor-pointer">
+              </a>
+              <a
+                href="https://twitter.com/manishdev21"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Twitter"
+                className="flex items-center gap-2 hover:text-blue-500 cursor-pointer"
+              >
                 <span>
-                  <FaInstagram />
+                  <FaTwitter />
                 </span>
-                <span>Instagram</span>
-              </div>
+                <span>Twitter</span>
+              </a>
             </div>
           </div>
           <div className="bg-black text-white rounded-2xl p-6 flex flex-col items-center justify-center">

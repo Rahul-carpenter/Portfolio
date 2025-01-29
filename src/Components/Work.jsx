@@ -26,7 +26,7 @@ const Work = () => {
     {
       title: "DS Network Solutions",
       github: "https://github.com/ManishDev20/DS-Network-Solution",
-      link: "https://dsnetworksolution.netlify.app",
+      link: "https://dsnetworksolution.in",
       img: "./img/dsns.png",
     },
   ];

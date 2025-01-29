@@ -6,6 +6,7 @@ import Landing from "./Pages/Landing";
 import ProgressDashboard from "./Pages/ProgressDashboard";
 import ContactForm from "./Pages/ContactForm";
 import TermsAndPolicies from "./Pages/TermsAndPolicies";
+import Thanks from "./Components/Thanks";
 // import Maintenance from "./Components/Maintenance";
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
         { path: "/contact-form", element: <ContactForm /> },
         { path: "/progress-dashbord", element: <ProgressDashboard /> },
         { path: "/privacy", element: <TermsAndPolicies /> },
+        { path: "/thanks", element: <Thanks /> },
       ],
     },
   ]);

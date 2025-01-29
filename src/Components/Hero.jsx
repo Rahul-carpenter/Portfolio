@@ -8,7 +8,8 @@ const Hero = () => {
       <div className="bg-white text-black rounded-3xl p-4  sm:p-8 text-center">
         <div className="flex justify-center mb-6">
           <img
-            src="./img/profile.png"
+            src="./img/profile.png
+            "
             alt="Profile"
             className="w-32 h-32 rounded-full object-cover"
           />

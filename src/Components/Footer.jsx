@@ -28,8 +28,8 @@ const Footer = () => {
               href="https://linkedin.com/in/ManishDev21"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:opacity-80"
               aria-label="LinkedIn"
+              className="hover:opacity-80"
             >
               <FaLinkedin size={20} />
             </a>
@@ -37,8 +37,8 @@ const Footer = () => {
               href="https://twitter.com/manishdev21"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:opacity-80"
               aria-label="Twitter"
+              className="hover:opacity-80"
             >
               <FaTwitter size={20} />
             </a>
@@ -58,7 +58,7 @@ const Footer = () => {
           <h3 className="text-lg font-bold">Quick Links</h3>
           <ul className="space-y-2">
             <li>
-              <a href="#_" alt="" className="text-gray-600 hover:text-black">
+              <a href="#h" alt="" className="text-gray-600 hover:text-black">
                 Home
               </a>
             </li>

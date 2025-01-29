@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { ArrowUpRight } from "lucide-react";
 const serviceOptions = [
   {
@@ -37,25 +37,6 @@ const budgetOptions = [
   },
 ];
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    service: "",
-    budget: "",
-    description: "",
-  });
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(formData);
-  };
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
   return (
     <div
       id="contact"
@@ -71,7 +52,17 @@ const Contact = () => {
             your goals.
           </p>
         </div>
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form
+          action="https://formsubmit.co/potentweb25official@gmail.com"
+          method="POST"
+          className="space-y-6"
+        >
+          <input type="hidden" name="_captcha" value="false"></input>
+          <input
+            type="hidden"
+            name="_next"
+            value="https://manishcodes.netlify.app/thanks"
+          ></input>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="space-y-2">
               <label htmlFor="name" className="block text-sm font-medium">
@@ -82,8 +73,6 @@ const Contact = () => {
                 id="name"
                 name="name"
                 required
-                value={formData.name}
-                onChange={handleChange}
                 className="w-full p-3 rounded-lg bg-gray-50 border border-gray-200 focus:outline-none focus:border-gray-300"
                 placeholder="John Doe"
               />
@@ -97,8 +86,6 @@ const Contact = () => {
                 id="email"
                 name="email"
                 required
-                value={formData.email}
-                onChange={handleChange}
                 className="w-full p-3 rounded-lg bg-gray-50 border border-gray-200 focus:outline-none focus:border-gray-300"
                 placeholder="john@example.com"
               />
@@ -113,8 +100,6 @@ const Contact = () => {
                 type="tel"
                 id="phone"
                 name="phone"
-                value={formData.phone}
-                onChange={handleChange}
                 className="w-full p-3 rounded-lg bg-gray-50 border border-gray-200 focus:outline-none focus:border-gray-300"
                 placeholder="+1 (555) 000-0000"
               />
@@ -127,8 +112,6 @@ const Contact = () => {
                 id="service"
                 name="service"
                 required
-                value={formData.service}
-                onChange={handleChange}
                 className="w-full p-3 rounded-lg bg-gray-50 border border-gray-200 focus:outline-none focus:border-gray-300 appearance-none"
               >
                 <option value="">Select a service</option>
@@ -148,8 +131,6 @@ const Contact = () => {
               id="budget"
               name="budget"
               required
-              value={formData.budget}
-              onChange={handleChange}
               className="w-full p-3 rounded-lg bg-gray-50 border border-gray-200 focus:outline-none focus:border-gray-300 appearance-none"
             >
               <option value="">Select your budget range</option>
@@ -168,8 +149,6 @@ const Contact = () => {
               id="description"
               name="description"
               required
-              value={formData.description}
-              onChange={handleChange}
               rows={6}
               className="w-full p-3 rounded-lg bg-gray-50 border border-gray-200 focus:outline-none focus:border-gray-300 resize-none"
               placeholder="Tell us about your project requirements and goals..."

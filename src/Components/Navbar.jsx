@@ -39,10 +39,10 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
   return (
-    <div>
+    <div id="h">
       <nav className=" max-w-[1200px] mx-auto relative ">
         <div className="flex items-center justify-between bg-white my-5 rounded-full px-6 py-3">
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-8 text-xl ">
             <a href="#about" className="hover:opacity-80">
               About me
             </a>
@@ -50,10 +50,10 @@ const Navbar = () => {
               Projects
             </a>
           </div>
-          <Link to={"/"} className="text-xl font-bold">
+          <Link to={"/"} className="text-xl md:text-3xl font-extrabold">
             Manish
           </Link>
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-8 text-lg">
             <Link to="/blog" className="hover:opacity-80">
               Blogs
             </Link>

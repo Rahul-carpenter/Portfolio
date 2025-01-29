@@ -2,18 +2,23 @@ import React from "react";
 
 const Thanks = () => {
   return (
-    <div className="max-w-[1200px] mx-auto rounded-3xl lg:rounded-full my-5 bg-white  text-black py-6">
-      <div className="">
-        <div className="text-center text-lg sm:text-xl md:text-3xl lg:text-4xl font-semibold py-5">
-          " Thanks ❤️ for Scrolling! "
-        </div>
-        <div className="text-center sm:text-lg  md:text-xl px-2 py-5">
-          I hope you found my work interesting. If you have any more questions
-          or have a project in mind.
-        </div>
-        <div className="w-max mx-auto rounded-2xl  text-center  px-4 py-1 ">
-          Feel free to reach out to me.
-        </div>
+    <div className="flex items-center justify-center min-h-screen bg-gray-50">
+      <div className="text-center bg-white p-8 rounded-lg shadow-xl max-w-lg w-full">
+        <h1 className="text-3xl font-semibold text-blue-600">Thank You!</h1>
+        <p className="mt-4 text-gray-600 text-lg">
+          Your query has been successfully submitted. I will get back to you as
+          soon as possible.
+        </p>
+        <p className="mt-2 text-gray-500">
+          In the meantime, feel free to explore my portfolio or contact me for
+          any further assistance.
+        </p>
+        <a
+          href="https://manishcodes.netlify.app/"
+          className="mt-6 inline-block px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition duration-200"
+        >
+          Go back to Homepage
+        </a>
       </div>
     </div>
   );
