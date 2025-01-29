@@ -53,7 +53,7 @@ const Contact = () => {
           </p>
         </div>
         <form
-          action="https://formsubmit.co/potentweb25official@gmail.com"
+          action="https://formsubmit.co/aad5f47fd4aa97b2ba37ca8fd38dd47b"
           method="POST"
           className="space-y-6"
         >
