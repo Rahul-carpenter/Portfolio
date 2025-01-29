@@ -37,6 +37,18 @@ const budgetOptions = [
   },
 ];
 const Contact = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Reset the form before redirecting
+    const form = e.target;
+    form.reset();
+
+    // Redirect to "Thank You" page after a short delay to give user a moment
+    setTimeout(() => {
+      window.location.href = "https://manishcodes.netlify.app/thanks"; // Your thank you page URL
+    }, 1000); // Delay for 1 second before redirecting
+  };
   return (
     <div
       id="contact"
@@ -53,6 +65,7 @@ const Contact = () => {
           </p>
         </div>
         <form
+          onSubmit={handleSubmit}
           action="https://formsubmit.co/aad5f47fd4aa97b2ba37ca8fd38dd47b"
           method="POST"
           className="space-y-6"
