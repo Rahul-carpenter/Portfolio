@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Visit my portfolio website linked below:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Portfolio Website: <a href="https://manishcodes.netlify.app">Live Link</a>
 
 ## Available Scripts
 
