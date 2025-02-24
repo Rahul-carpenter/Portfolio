@@ -43,7 +43,7 @@ const Footer = () => {
               <FaTwitter size={20} />
             </a>
             <a
-              href="https://instagram.com/potentweb25"
+              href="https://instagram.com/dev.manish_"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:opacity-80"
@@ -106,7 +106,7 @@ const Footer = () => {
           <h3 className="text-lg font-bold">Contact Info</h3>
           <div className="space-y-2">
             <a
-              href="mailto:contact@example.com"
+              href="mailto:potentweb25official@gmail.com"
               className="flex items-center gap-2 text-gray-600 hover:text-black"
             >
               <IoMdMail /> potentweb25official@gmail.com
