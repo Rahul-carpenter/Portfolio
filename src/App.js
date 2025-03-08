@@ -1,5 +1,9 @@
-import React from "react";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import React, { useEffect } from "react";
+import {
+  RouterProvider,
+  createBrowserRouter,
+  useLocation,
+} from "react-router-dom";
 import Layout from "./Components/Layout";
 import Blogs from "./Pages/Blogs";
 import Landing from "./Pages/Landing";
@@ -10,6 +14,13 @@ import Thanks from "./Components/Thanks";
 // import Maintenance from "./Components/Maintenance";
 
 const App = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.gtag("config", "G-5ZCBR4Q3ZY", {
+      page_path: location.pathname,
+    });
+  }, [location]);
   const routes = createBrowserRouter([
     {
       path: "",

@@ -1,5 +1,11 @@
 import React from "react";
 const Hero = () => {
+  const handleHireMeClick = () => {
+    window.gtag("event", "hire_me_click", {
+      event_category: "Button Click",
+      event_label: "Hire Me Button",
+    });
+  };
   return (
     <section
       id="hero"
@@ -21,6 +27,7 @@ const Hero = () => {
         </p>
         <div className="flex justify-center gap-4">
           <a
+            onClick={handleHireMeClick}
             href="#contact"
             className="bg-black text-white px-6 py-2 rounded-full hover:opacity-90"
           >

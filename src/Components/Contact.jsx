@@ -44,6 +44,11 @@ const Contact = () => {
     const form = e.target;
     form.reset();
 
+    window.gtag("event", "form_submission", {
+      event_category: "Form",
+      event_label: "Contact Form Submission",
+    });
+
     // Redirect to "Thank You" page after a short delay to give user a moment
     setTimeout(() => {
       window.location.href = "https://manishcodes.netlify.app/thanks"; // Your thank you page URL
