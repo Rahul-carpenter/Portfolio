@@ -177,6 +177,10 @@ const ProgressDashboard = () => {
     return () => clearInterval(timer);
   }, []);
 
+  useEffect(() => {
+    window.scrollTo(0, 0); // ✅ Scroll to top when Contact Page loads
+  }, []);
+
   return (
     <div className="bg-[#161616]">
       <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-orange-600 font-semibold p-2 text-white cursor-progress text-center sm:text-lg md:text-xl lg:text-2xl hover:underline">
