@@ -1,9 +1,5 @@
-import React, { useEffect } from "react";
-import {
-  RouterProvider,
-  createBrowserRouter,
-  useLocation,
-} from "react-router-dom";
+import React from "react";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Layout from "./Components/Layout";
 import Blogs from "./Pages/Blogs";
 import Landing from "./Pages/Landing";
@@ -14,28 +10,6 @@ import Thanks from "./Components/Thanks";
 // import Maintenance from "./Components/Maintenance";
 
 const App = () => {
-  const location = useLocation();
-
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://www.googletagmanager.com/gtag/js?id=G-5ZCBR4Q3ZY";
-    script.async = true;
-    document.body.appendChild(script);
-
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      window.dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-    gtag("config", "G-5ZCBR4Q3ZY");
-  }, []);
-
-  useEffect(() => {
-    window.gtag("config", "G-5ZCBR4Q3ZY", {
-      page_path: location.pathname,
-    });
-  }, [location]);
-
   const routes = createBrowserRouter([
     {
       path: "",
