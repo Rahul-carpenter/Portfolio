@@ -22,7 +22,7 @@ const ProgressDashboard = () => {
   const earnedData = [
     {
       category: "Freelancing",
-      amount: 5000,
+      amount: 10000,
       color: "bg-purple-500",
     },
     { category: "E-books", amount: 0, color: "bg-sky-500" },

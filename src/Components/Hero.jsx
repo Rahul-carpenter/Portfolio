@@ -34,7 +34,7 @@ const Hero = () => {
             Let's Work
           </a>
           <a
-            href="https://drive.google.com/file/d/1kRLlbynmn0Ip0Lh-yKfkgW7j4jcMIuid/view?usp=sharing"
+            href="https://drive.google.com/file/d/1mfEeQ8iW1gNlM1Xt2jN663SAx5X8s8Ft/view?usp=sharing"
             className="bg-black text-white px-6 py-2 rounded-full hover:opacity-90"
           >
             My Resume
