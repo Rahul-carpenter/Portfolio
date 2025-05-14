@@ -22,7 +22,7 @@ const ProgressDashboard = () => {
   const earnedData = [
     {
       category: "Freelancing",
-      amount: 10000,
+      amount: 36500,
       color: "bg-purple-500",
     },
     { category: "E-books", amount: 0, color: "bg-sky-500" },
@@ -136,7 +136,7 @@ const ProgressDashboard = () => {
           </div>
           <div className="flex items-center gap-2">
             <span className="font-semibold text-white">Last Update:</span>
-            <span className="text-gray-400">13 November, 2024</span>
+            <span className="text-gray-400">17 March, 2025</span>
           </div>
         </div>
 

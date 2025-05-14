@@ -24,44 +24,13 @@ const Work = () => {
       img: "./img/ffccafe.png",
     },
     {
-      title: "DS Network Solutions",
-      github: "https://github.com/ManishDev20/DS-Network-Solution",
-      link: "https://dsnetworksolution.in",
-      img: "./img/dsns.png",
+      title: "CN Films Photography",
+      github: "https://github.com/ManishDev20/CN-FILMS",
+      link: "https://cnfilms.in",
+      img: "./img/cnfp.png",
     },
   ];
-  //   const projects = [
-  //     {
-  //       id: 1,
-  //       title: 'Portfolio Website',
-  //       description:
-  //         'A full-featured e-commerce dashboard with real-time analytics, inventory management, and order processing.',
-  //       image:
-  //         'https://github.com/ManishDev20/Portfolio',
-  //       github: 'https://github.com',
-  //       live: 'https://example.com',
-  //     },
-  //     {
-  //       id: 2,
-  //       title: 'Social Media Platform',
-  //       description:
-  //         'Modern social media platform built with React and Node.js, featuring real-time messaging and content sharing.',
-  //       image:
-  //         'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop',
-  //       github: 'https://github.com',
-  //       live: 'https://example.com',
-  //     },
-  //     {
-  //       id: 3,
-  //       title: 'Task Management App',
-  //       description:
-  //         'Collaborative task management application with team features, deadlines, and progress tracking.',
-  //       image:
-  //         'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2340&auto=format&fit=crop',
-  //       github: 'https://github.com',
-  //       live: 'https://example.com',
-  //     },
-  //   ]
+
   return (
     <section
       id="projects"
