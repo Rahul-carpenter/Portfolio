@@ -15,32 +15,25 @@ const budgetOptions = [
 ];
 
 const Contact = () => {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const form = e.target;
-    form.reset();
-
-    // Add analytics later if needed
-    setTimeout(() => {
-      window.location.href = "/thanks"; // Change if you have a thank you page
-    }, 1000);
-  };
-
   return (
-    <div id="contact" className="max-w-[1200px] mx-auto bg-[#090e16] text-white rounded-3xl p-8 transition-colors duration-500">
+    <div
+      id="contact"
+      className="max-w-[1200px] mx-auto bg-[#090e16] text-white rounded-3xl p-8 transition-colors duration-500"
+    >
       <h2 className="text-4xl font-bold text-center mb-6 text-white">
         Let's Connect
       </h2>
       <p className="text-center text-gray-300 mb-8">
-        Working on a project? I'd love to help. Fill out the form and I’ll get back to you soon.
+        Working on a project? I'd love to help. Fill out the form and I’ll get
+        back to you soon.
       </p>
 
       <form
-        onSubmit={handleSubmit}
-        action="https://formsubmit.co/rahulcarpenter09@gmail.com" // Replace with your email or backend handler
+        action="https://formsubmit.co/rahulcarpenter486@gmail.com" // <-- REPLACE with your email
         method="POST"
         className="space-y-6"
       >
+        {/* Hidden inputs for FormSubmit */}
         <input type="hidden" name="_captcha" value="false" />
         <input type="hidden" name="_next" value="/thanks" />
 
@@ -89,7 +82,10 @@ const Contact = () => {
           </div>
 
           <div>
-            <label htmlFor="service" className="block text-sm font-medium mb-1">
+            <label
+              htmlFor="service"
+              className="block text-sm font-medium mb-1"
+            >
               Service Needed <span className="text-red-500">*</span>
             </label>
             <select
@@ -112,7 +108,10 @@ const Contact = () => {
         </div>
 
         <div>
-          <label htmlFor="budget" className="block text-sm font-medium mb-1">
+          <label
+            htmlFor="budget"
+            className="block text-sm font-medium mb-1"
+          >
             Budget Estimate <span className="text-red-500">*</span>
           </label>
           <select
@@ -134,7 +133,10 @@ const Contact = () => {
         </div>
 
         <div>
-          <label htmlFor="description" className="block text-sm font-medium mb-1">
+          <label
+            htmlFor="description"
+            className="block text-sm font-medium mb-1"
+          >
             Project Description <span className="text-red-500">*</span>
           </label>
           <textarea
