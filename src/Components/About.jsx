@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { Code2, Server, BrainCircuit } from "lucide-react";
 import { Link } from "react-router-dom";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 const About = () => {
   const [days, setDays] = useState(0);
@@ -16,13 +16,14 @@ const About = () => {
   return (
     <section
       id="about"
-      className="max-w-[1200px] mx-auto px-4 sm:px-10 py-10 bg-white my-8 rounded-3xl shadow-xl"
+      className="max-w-[1200px] mx-auto px-4 sm:px-10 py-10 rounded-3xl shadow-xl
+                 bg-white dark:bg-[#111827] my-8"
     >
-      <div className="text-black rounded-3xl p-6 sm:p-10">
-        <h2 className="text-4xl sm:text-5xl font-bold text-center text-gray-800 mb-6">
+      <div className="rounded-3xl p-6 sm:p-10 text-gray-900 dark:text-gray-300">
+        <h2 className="text-4xl sm:text-5xl font-bold text-center mb-6 text-gray-800 dark:text-white">
           About Me
         </h2>
-        <p className="text-center text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
+        <p className="text-center text-lg mb-12 max-w-3xl mx-auto text-gray-600 dark:text-gray-400">
           Hey, I’m Rahul — a self-driven developer with a deep curiosity for DevOps, automation, and cloud technologies. 
           I love turning real-world problems into working solutions. From building a voice assistant in Streamlit to 
           deploying apps with Docker and Kubernetes, I'm all about <strong>learning by doing</strong>.
@@ -30,7 +31,7 @@ const About = () => {
 
         <div className="grid md:grid-cols-3 gap-8">
           {/* Connect Section */}
-          <div className="bg-black text-white rounded-2xl p-6">
+          <div className="rounded-2xl p-6 bg-gray-900 dark:bg-black text-white">
             <h3 className="text-xl font-semibold mb-4">Connect With Me</h3>
             <div className="space-y-3">
               <a
@@ -55,7 +56,7 @@ const About = () => {
           </div>
 
           {/* Progress Section */}
-          <div className="bg-black text-white rounded-2xl p-6 flex flex-col items-center justify-center">
+          <div className="rounded-2xl p-6 bg-gray-900 dark:bg-black text-white flex flex-col items-center justify-center">
             <h3 className="text-xl font-semibold mb-2">Learning Journey</h3>
             <p className="mb-3 text-sm text-gray-300">
               {days}+ Days of Continuous Learning 🚀
@@ -69,7 +70,7 @@ const About = () => {
           </div>
 
           {/* Skills Section */}
-          <div className="bg-black text-white rounded-2xl p-6">
+          <div className="rounded-2xl p-6 bg-gray-900 dark:bg-black text-white">
             <h3 className="text-xl font-semibold mb-4">Skills</h3>
             <div className="space-y-3">
               <div className="flex items-center gap-2">

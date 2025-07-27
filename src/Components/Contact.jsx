@@ -27,15 +27,17 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact" className="max-w-[1200px] mx-auto bg-white text-black rounded-3xl p-8">
-      <h2 className="text-4xl font-bold text-center mb-6 text-gray-800">Let's Connect</h2>
-      <p className="text-center text-gray-600 mb-8">
+    <div id="contact" className="max-w-[1200px] mx-auto bg-[#090e16] text-white rounded-3xl p-8 transition-colors duration-500">
+      <h2 className="text-4xl font-bold text-center mb-6 text-white">
+        Let's Connect
+      </h2>
+      <p className="text-center text-gray-300 mb-8">
         Working on a project? I'd love to help. Fill out the form and I’ll get back to you soon.
       </p>
 
       <form
         onSubmit={handleSubmit}
-        action="https://formsubmit.co/rahulcarpenter09@gmail.com" // 🔁 Replace with your actual email or handler
+        action="https://formsubmit.co/rahulcarpenter09@gmail.com" // Replace with your email or backend handler
         method="POST"
         className="space-y-6"
       >
@@ -44,80 +46,110 @@ const Contact = () => {
 
         <div className="grid md:grid-cols-2 gap-6">
           <div>
-            <label className="block text-sm font-medium">Name <span className="text-red-500">*</span></label>
+            <label htmlFor="name" className="block text-sm font-medium mb-1">
+              Name <span className="text-red-500">*</span>
+            </label>
             <input
+              id="name"
               type="text"
               name="name"
               required
-              className="w-full p-3 rounded-lg bg-gray-100 border border-gray-300"
               placeholder="Your name"
+              className="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-gradientStart transition"
             />
           </div>
+
           <div>
-            <label className="block text-sm font-medium">Email <span className="text-red-500">*</span></label>
+            <label htmlFor="email" className="block text-sm font-medium mb-1">
+              Email <span className="text-red-500">*</span>
+            </label>
             <input
+              id="email"
               type="email"
               name="email"
               required
-              className="w-full p-3 rounded-lg bg-gray-100 border border-gray-300"
               placeholder="you@example.com"
+              className="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-gradientStart transition"
             />
           </div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6">
           <div>
-            <label className="block text-sm font-medium">Phone (optional)</label>
+            <label htmlFor="phone" className="block text-sm font-medium mb-1">
+              Phone (optional)
+            </label>
             <input
+              id="phone"
               type="tel"
               name="phone"
-              className="w-full p-3 rounded-lg bg-gray-100 border border-gray-300"
               placeholder="+91 98765 43210"
+              className="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-gradientStart transition"
             />
           </div>
+
           <div>
-            <label className="block text-sm font-medium">Service Needed <span className="text-red-500">*</span></label>
+            <label htmlFor="service" className="block text-sm font-medium mb-1">
+              Service Needed <span className="text-red-500">*</span>
+            </label>
             <select
+              id="service"
               name="service"
               required
-              className="w-full p-3 rounded-lg bg-gray-100 border border-gray-300"
+              className="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-gradientStart transition"
+              defaultValue=""
             >
-              <option value="">Select</option>
+              <option value="" disabled>
+                Select
+              </option>
               {serviceOptions.map((opt) => (
-                <option key={opt.value} value={opt.value}>{opt.label}</option>
+                <option key={opt.value} value={opt.value}>
+                  {opt.label}
+                </option>
               ))}
             </select>
           </div>
         </div>
 
         <div>
-          <label className="block text-sm font-medium">Budget Estimate <span className="text-red-500">*</span></label>
+          <label htmlFor="budget" className="block text-sm font-medium mb-1">
+            Budget Estimate <span className="text-red-500">*</span>
+          </label>
           <select
+            id="budget"
             name="budget"
             required
-            className="w-full p-3 rounded-lg bg-gray-100 border border-gray-300"
+            className="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-gradientStart transition"
+            defaultValue=""
           >
-            <option value="">Choose a range</option>
+            <option value="" disabled>
+              Choose a range
+            </option>
             {budgetOptions.map((opt) => (
-              <option key={opt.value} value={opt.value}>{opt.label}</option>
+              <option key={opt.value} value={opt.value}>
+                {opt.label}
+              </option>
             ))}
           </select>
         </div>
 
         <div>
-          <label className="block text-sm font-medium">Project Description <span className="text-red-500">*</span></label>
+          <label htmlFor="description" className="block text-sm font-medium mb-1">
+            Project Description <span className="text-red-500">*</span>
+          </label>
           <textarea
+            id="description"
             name="description"
             rows={5}
             required
-            className="w-full p-3 rounded-lg bg-gray-100 border border-gray-300 resize-none"
             placeholder="Tell me about your goals or project idea..."
+            className="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 text-white resize-none focus:outline-none focus:ring-2 focus:ring-gradientStart transition"
           />
         </div>
 
         <button
           type="submit"
-          className="w-full bg-black text-white py-4 rounded-lg flex items-center justify-center gap-2 hover:bg-gray-900 transition"
+          className="w-full button-gradient py-4 flex items-center justify-center gap-2"
         >
           Send Message <ArrowUpRight size={20} />
         </button>

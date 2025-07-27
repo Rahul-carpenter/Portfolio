@@ -44,11 +44,11 @@ const Services = () => {
 
   return (
     <section
-      className="max-w-[1200px] mx-auto rounded-3xl py-10 sm:py-20 px-4 sm:px-10 bg-gray-50 dark:bg-black"
+      className="max-w-[1200px] mx-auto rounded-3xl py-10 sm:py-20 px-4 sm:px-10 bg-[#090e16] dark:bg-[#090e16]"
       id="services"
     >
       <div className="text-center">
-        <h2 className="text-5xl font-bold text-gray-300 mb-10 md:mb-20 uppercase">
+        <h2 className="text-5xl font-bold mb-10 md:mb-20 uppercase gradient-text">
           Services
         </h2>
 
@@ -60,17 +60,13 @@ const Services = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 flex flex-col items-center text-center"
+              className="bg-gray-900 dark:bg-gray-800 shadow-lg rounded-lg p-6 flex flex-col items-center text-center"
             >
-              <div className="bg-blue-100 dark:bg-blue-900 text-blue-500 p-4 rounded-full text-4xl mb-4">
+              <div className="bg-gradient-to-r from-gradientStart to-gradientEnd text-white p-4 rounded-full text-4xl mb-4 flex items-center justify-center">
                 {service.icon}
               </div>
-              <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-200 mb-2">
-                {service.title}
-              </h3>
-              <p className="text-gray-500 dark:text-gray-400">
-                {service.description}
-              </p>
+              <h3 className="text-lg font-semibold text-white mb-2">{service.title}</h3>
+              <p className="text-gray-300">{service.description}</p>
             </motion.div>
           ))}
         </div>

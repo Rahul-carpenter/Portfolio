@@ -5,12 +5,12 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="max-w-[1200px] mx-auto bg-white text-black rounded-3xl p-8 my-5">
+    <footer className="max-w-[1200px] mx-auto bg-white dark:bg-[#090e16] text-black dark:text-gray-300 rounded-3xl p-8 my-5 transition-colors duration-500">
       <div className="grid md:grid-cols-4 gap-8 mb-8">
         {/* Brand Section */}
         <div className="space-y-4">
-          <h3 className="text-xl font-bold">Rj</h3>
-          <p className="text-gray-600 text-sm">
+          <h3 className="text-xl font-bold text-gray-900 dark:text-white">Rj</h3>
+          <p className="text-gray-600 dark:text-gray-400 text-sm">
             DevOps & Cloud enthusiast building real-world tools and platforms with modern tech.
           </p>
           <div className="flex gap-4">
@@ -19,7 +19,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
-              className="hover:opacity-80"
+              className="hover:opacity-80 text-gray-800 dark:text-gray-300 transition"
             >
               <FaGithub size={20} />
             </a>
@@ -28,7 +28,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
-              className="hover:opacity-80"
+              className="hover:opacity-80 text-gray-800 dark:text-gray-300 transition"
             >
               <FaLinkedin size={20} />
             </a>
@@ -37,25 +37,25 @@ const Footer = () => {
 
         {/* Quick Links */}
         <div className="space-y-4">
-          <h3 className="text-lg font-bold">Quick Links</h3>
+          <h3 className="text-lg font-bold text-gray-900 dark:text-white">Quick Links</h3>
           <ul className="space-y-2">
             <li>
-              <a href="#home" className="text-gray-600 hover:text-black">
+              <a href="#home" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition">
                 Home
               </a>
             </li>
             <li>
-              <a href="#about" className="text-gray-600 hover:text-black">
+              <a href="#about" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition">
                 About
               </a>
             </li>
             <li>
-              <a href="#projects" className="text-gray-600 hover:text-black">
+              <a href="#projects" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition">
                 Projects
               </a>
             </li>
             <li>
-              <a href="#contact" className="text-gray-600 hover:text-black">
+              <a href="#contact" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition">
                 Contact
               </a>
             </li>
@@ -64,22 +64,22 @@ const Footer = () => {
 
         {/* Services */}
         <div className="space-y-4">
-          <h3 className="text-lg font-bold">Services</h3>
-          <ul className="space-y-2">
-            <li className="text-gray-600">DevOps Projects</li>
-            <li className="text-gray-600">Cloud Deployment</li>
-            <li className="text-gray-600">CI/CD Pipelines</li>
-            <li className="text-gray-600">System Automation</li>
+          <h3 className="text-lg font-bold text-gray-900 dark:text-white">Services</h3>
+          <ul className="space-y-2 text-gray-600 dark:text-gray-400">
+            <li>DevOps Projects</li>
+            <li>Cloud Deployment</li>
+            <li>CI/CD Pipelines</li>
+            <li>System Automation</li>
           </ul>
         </div>
 
         {/* Contact Info */}
         <div className="space-y-4">
-          <h3 className="text-lg font-bold">Contact Info</h3>
+          <h3 className="text-lg font-bold text-gray-900 dark:text-white">Contact Info</h3>
           <div className="space-y-2">
             <a
               href="mailto:rj@example.com"
-              className="flex items-center gap-2 text-gray-600 hover:text-black"
+              className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition"
             >
               <IoMdMail /> rahulcarpenter09.com
             </a>
@@ -88,14 +88,17 @@ const Footer = () => {
       </div>
 
       {/* Copyright */}
-      <div className="pt-8 mt-8 border-t border-gray-200">
+      <div className="pt-8 mt-8 border-t border-gray-300 dark:border-gray-700">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-gray-600 text-sm">
+          <p className="text-gray-600 dark:text-gray-400 text-sm">
             © {new Date().getFullYear()} Rahul. All rights reserved.
           </p>
           <div className="flex gap-4 text-sm">
-            <Link to="/privacy" className="text-gray-600 hover:text-black">
-              Terms & Policy
+            <Link
+              to="/privacy"
+              className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition"
+            >
+              Terms &amp; Policy
             </Link>
           </div>
         </div>

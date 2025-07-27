@@ -11,6 +11,12 @@
   scroll-behavior: smooth;
 }
 
+/* Body background and text color for dark theme */
+body {
+  background: #090e16; /* Dark navy background */
+  color: #e5e7eb;     /* Cool muted white text */
+}
+
 /* Autofill Fix for Input Fields */
 input:-webkit-autofill {
   box-shadow: 0 0 0px 1000px transparent inset !important;
@@ -22,6 +28,16 @@ input:-webkit-autofill {
 .Logo {
   font-family: "Lavishly Yours", cursive;
   user-select: none;
+  color: white;
+}
+
+/* Gradient Text for Name / Headings */
+.gradient-text {
+  background: linear-gradient(90deg, #6A82FB 0%, #FC5C7D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }
 
 /* Section Headings */
@@ -32,6 +48,7 @@ input:-webkit-autofill {
   font-family: "Poppins", sans-serif;
   border: 2px solid white;
   transition-duration: 1s;
+  color: white;
 }
 
 .secHead {
@@ -42,6 +59,41 @@ input:-webkit-autofill {
 .byCoffee,
 .hireMe {
   font-family: "Montserrat", sans-serif;
+}
+
+/* Gradient Buttons */
+.button-gradient {
+  background: linear-gradient(90deg, #6A82FB 0%, #FC5C7D 100%);
+  color: white;
+  border: none;
+  border-radius: 9999px; /* fully rounded */
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  display: inline-block;
+  text-align: center;
+}
+
+.button-gradient:hover {
+  filter: brightness(1.1);
+}
+
+/* Navbar and Footer dark background */
+.navbar, .footer {
+  background-color: #090e16;
+  color: white;
+}
+
+/* Links default */
+a {
+  color: #6A82FB; /* soft blue */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #FC5C7D; /* pink accent */
 }
 
 /* Hide Unused Service Radio Buttons */
