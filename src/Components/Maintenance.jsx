@@ -13,29 +13,27 @@ const Maintenance = () => {
         </p>
         <img
           src="https://i.giphy.com/media/3o6ZsYZga7hQ8pZcOY/giphy.gif"
-          alt="Funny maintenance gif"
+          alt="Maintenance gif"
           className="rounded-lg shadow-lg mb-6 w-64 md:w-80"
         />
         <p className="text-sm md:text-base text-gray-400 text-center">
-          Don't worry, I'll be back soon, probably with a fresh cup of coffee ☕
-          and a new design!
+          Don't worry, I’ll be back soon with a better version ✨
         </p>
         <p className="text-sm md:text-base text-gray-500 mt-2">
-          Meanwhile, you can reach me at{" "}
+          Reach me at{" "}
           <a
-            href="mailto:your-email@example.com"
+            href="mailto:rahulcarpenter09@gmail.com"
             className="text-yellow-500 hover:underline"
           >
-            manishdev2k02@gmail.com
+            rahulcarpenter09@gmail.com
           </a>
         </p>
         <div className="text-lg my-10">
-          {/*  WhatsApp me */}
           <a
-            href="https://wa.me/+917357723361"
+            href="https://wa.me/+918005790802"
             className="bg-green-700 hover:bg-green-900 text-white px-4 py-2 rounded-3xl"
           >
-            WhatsApp me{" "}
+            WhatsApp Me
           </a>
         </div>
       </div>

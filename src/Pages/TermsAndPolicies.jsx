@@ -8,7 +8,7 @@ const TermsAndPolicies = () => {
           Terms and Policies
         </h1>
         <p className="text-sm sm:text-base text-gray-300 mb-4 text-center">
-          Effective Date: January 19, 2025
+          Effective Date: July 26, 2025
         </p>
         <div className="space-y-6">
           <section>
@@ -16,10 +16,7 @@ const TermsAndPolicies = () => {
               1. Purpose of the Website
             </h2>
             <p className="text-gray-300 leading-relaxed">
-              This website is designed to showcase my work as a freelance web
-              developer and provide a way for potential clients to contact me.
-              You may browse the content and use the contact form to inquire
-              about my services.
+              This portfolio website showcases my real-world DevOps and Python-based projects. It's intended to present my work, technical skills, and personal tools. Visitors may explore project details and contact me for collaboration or inquiries.
             </p>
           </section>
 
@@ -28,77 +25,45 @@ const TermsAndPolicies = () => {
               2. Information Collection and Use
             </h2>
             <p className="text-gray-300 leading-relaxed">
-              When you submit the contact form, I collect the following details:
+              If you submit the contact form (if available), I may collect:
             </p>
             <ul className="list-disc list-inside text-gray-300">
               <li>Your name</li>
               <li>Your email address</li>
-              <li>Any additional information included in your message</li>
+              <li>Message content</li>
             </ul>
             <p className="text-gray-300 mt-2 leading-relaxed">
-              This information is used solely to respond to your inquiries,
-              discuss potential projects or collaborations, and maintain
-              communication for future requirements.
+              This information is only used to respond to inquiries about projects, tools, or collaboration ideas.
             </p>
           </section>
 
           <section>
             <h2 className="text-xl font-semibold mb-2">3. Data Privacy</h2>
             <p className="text-gray-300 leading-relaxed">
-              Your personal information will not be shared, sold, or rented to
-              any third parties. I take reasonable steps to protect your data
-              from unauthorized access or misuse. However, no method of data
-              transmission over the internet is entirely secure.
+              I respect your privacy. Any information you submit will not be shared or used for marketing. No cookies or tracking tools are intentionally embedded.
             </p>
-            <p className="text-gray-300 mt-2 leading-relaxed">
-              You can request access, correction, or deletion of your personal
-              data by contacting me at a{" "}
-              <a
-                href="mailto:potentweb25official@gmail.com"
-                className="text-blue-700 hover:underline"
-              >
-                potentweb25official@gmail.com
-              </a>
-              .
+          </section>
+
+          <section>
+            <h2 className="text-xl font-semibold mb-2">4. Project Disclaimer</h2>
+            <p className="text-gray-300 leading-relaxed">
+              All showcased projects are built for learning, exploration, or real-world case studies. Code or ideas may be reused under open-source conditions where applicable. However, no commercial warranty is provided.
             </p>
           </section>
 
           <section>
             <h2 className="text-xl font-semibold mb-2">
-              4. Prohibited Activities
+              5. Policy Updates
             </h2>
             <p className="text-gray-300 leading-relaxed">
-              Misuse of the contact form, including sending spam or
-              inappropriate inquiries, is strictly prohibited. Any unauthorized
-              use of this website for malicious purposes is prohibited.
+              This page may be updated periodically. Check back here for any changes to data handling or contact usage.
             </p>
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold mb-2">5. Disclaimer</h2>
+            <h2 className="text-xl font-semibold mb-2">6. Contact</h2>
             <p className="text-gray-300 leading-relaxed">
-              The content on this website is provided for informational purposes
-              only. While I strive to keep it accurate and up-to-date, I make no
-              guarantees about its completeness or accuracy.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-xl font-semibold mb-2">
-              6. Changes to Terms and Policies
-            </h2>
-            <p className="text-gray-300 leading-relaxed">
-              I reserve the right to update these Terms and Policies at any time
-              without prior notice. Continued use of the website after updates
-              are made constitutes acceptance of the revised terms.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-xl font-semibold mb-2">7. Contact</h2>
-            <p className="text-gray-300 leading-relaxed">
-              If you have any questions or concerns about these Terms and
-              Policies, feel free to reach out to me at
+              For any questions related to this site or my projects, email me at
               <a
                 href="mailto:potentweb25official@gmail.com"
                 className="text-blue-700 hover:underline mx-1"

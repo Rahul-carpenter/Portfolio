@@ -2,9 +2,12 @@ import React from "react";
 
 const Blogs = () => {
   return (
-    <div className="w-full h-screen flex justify-center items-center text-5xl font-bold text-[#5174ad] border ">
-      <div className="px-5 leading-[60px] text-center">
-        Currently Unavailable. Stay Tuned!
+    <div className="w-full min-h-screen flex justify-center items-center bg-white px-4">
+      <div className="text-center text-[#5174ad] text-3xl md:text-4xl font-semibold">
+        📭 No Blogs Yet
+        <p className="mt-4 text-base md:text-lg text-gray-600 font-normal">
+          I haven't written any blog posts yet — but I'm actively building projects and learning every day.
+        </p>
       </div>
     </div>
   );

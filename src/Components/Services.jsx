@@ -12,34 +12,33 @@ const Services = () => {
   const services = [
     {
       icon: <FaCode />,
-      title: "Web Development",
+      title: "Backend Development",
       description:
-        "I create clean, minimalist websites with intuitive navigation, responsive layouts, high-quality visuals, fast loading, seamless interactions, and subtle animations.",
-    },
-
-    {
-      icon: <FaPalette />,
-      title: "Web Designing",
-      description:
-        "I design visually engaging, user-friendly websites with responsive layouts, intuitive navigation, and seamless experiences to captivate and retain visitors across all devices",
-    },
-    {
-      icon: <FaSearch />,
-      title: "Search Engine Optimization",
-      description:
-        "Boost your site's visibility with keyword research, on-page optimization, and technical SEO strategies to drive organic traffic and improve rankings.",
+        "I build efficient and scalable backend systems using Python (Flask), with MySQL database integration and RESTful API development.",
     },
     {
       icon: <FaTools />,
-      title: "Website Maintenance",
+      title: "DevOps & CI/CD",
       description:
-        "Keep your site updated, secure, and bug-free with ongoing maintenance, performance checks, and prompt issue resolution.",
+        "I automate deployments and streamline pipelines using Jenkins, Docker, Kubernetes, and CI/CD practices for real-world scalability.",
     },
     {
       icon: <FaChartLine />,
-      title: "Web Consultancy",
+      title: "Cloud Infrastructure",
       description:
-        "Receive expert guidance on strategy, design, and development for impactful, scalable web solutions.",
+        "I deploy and manage cloud solutions on AWS with EC2 and 3-tier architecture, and handle provisioning using Terraform and Ansible.",
+    },
+    {
+      icon: <FaSearch />,
+      title: "Monitoring & Automation",
+      description:
+        "I implement logging, monitoring, and automation workflows for high-availability systems using Shell scripts and infrastructure as code.",
+    },
+    {
+      icon: <FaPalette />,
+      title: "Dashboard & Visualization",
+      description:
+        "I design and build interactive dashboards using Streamlit to provide real-time data insights for business and lead tracking.",
     },
   ];
 
@@ -48,8 +47,8 @@ const Services = () => {
       className="max-w-[1200px] mx-auto rounded-3xl py-10 sm:py-20 px-4 sm:px-10 bg-gray-50 dark:bg-black"
       id="services"
     >
-      <div className="container mx-auto px-2 sm:px-6 text-center">
-        <h2 className="text-5xl font-bold text-gray-300 mb-10 md:mb-20 uppercase text-center">
+      <div className="text-center">
+        <h2 className="text-5xl font-bold text-gray-300 mb-10 md:mb-20 uppercase">
           Services
         </h2>
 
@@ -58,12 +57,14 @@ const Services = () => {
             <motion.div
               key={index}
               whileHover={{ scale: 1.05 }}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
               className="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 flex flex-col items-center text-center"
             >
-              <div className="text-blue-500 text-4xl mb-4">{service.icon}</div>
+              <div className="bg-blue-100 dark:bg-blue-900 text-blue-500 p-4 rounded-full text-4xl mb-4">
+                {service.icon}
+              </div>
               <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-200 mb-2">
                 {service.title}
               </h3>

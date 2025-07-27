@@ -1,118 +1,88 @@
-import React from "react";
-
-import { Globe2, PenTool } from "lucide-react";
+import React, { useEffect, useState } from "react";
+import { Code2, Server, BrainCircuit } from "lucide-react";
 import { Link } from "react-router-dom";
-import { FaLinkedin, FaTwitter } from "react-icons/fa6";
-import { FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 const About = () => {
-  //   const ref = useRef(null);
-  //   const isInView = useInView(ref, { once: true });
+  const [days, setDays] = useState(0);
 
-  // days counter
-
-  //   const [days, setDays] = useState(0);
-
-  //   useEffect(() => {
-  //     // Define the start date
-  //     const startDate = new Date("2022-09-01");
-  //     const today = new Date();
-
-  //     // Calculate the difference in time
-  //     const differenceInTime = today - startDate;
-
-  //     // Convert time difference to days
-  //     const differenceInDays = Math.floor(
-  //       differenceInTime / (1000 * 60 * 60 * 24)
-  //     );
-  //     setDays(differenceInDays);
-  //   }, []); // Empty dependency array ensures this runs only once on mount
+  useEffect(() => {
+    const startDate = new Date("2024-01-01"); // Update this to your actual journey start date
+    const today = new Date();
+    const diff = today - startDate;
+    setDays(Math.floor(diff / (1000 * 60 * 60 * 24)));
+  }, []);
 
   return (
     <section
       id="about"
-      className="max-w-[1200px] mx-auto h-max px-4 sm:px-10 py-5 sm:py-10  bg-[#fff] my-5 rounded-3xl relative"
+      className="max-w-[1200px] mx-auto px-4 sm:px-10 py-10 bg-white my-8 rounded-3xl shadow-xl"
     >
-      <div className="bg-white text-black rounded-3xl p-4 sm:p-8">
-        <h2 className="text-5xl font-bold text-gray-300 mb-8 text-center">
-          ABOUT ME
+      <div className="text-black rounded-3xl p-6 sm:p-10">
+        <h2 className="text-4xl sm:text-5xl font-bold text-center text-gray-800 mb-6">
+          About Me
         </h2>
-        <p className="text-center text-lg mb-12 max-w-3xl mx-auto">
-          I'm all about developing websites— Helping businesses to grow online,
-          Individuals to build personal branding, and always open to listen new
-          ideas from you.
+        <p className="text-center text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
+          Hey, I’m Rahul — a self-driven developer with a deep curiosity for DevOps, automation, and cloud technologies. 
+          I love turning real-world problems into working solutions. From building a voice assistant in Streamlit to 
+          deploying apps with Docker and Kubernetes, I'm all about <strong>learning by doing</strong>.
         </p>
+
         <div className="grid md:grid-cols-3 gap-8">
+          {/* Connect Section */}
           <div className="bg-black text-white rounded-2xl p-6">
-            <h3 className="text-xl mb-4">Connect</h3>
+            <h3 className="text-xl font-semibold mb-4">Connect With Me</h3>
             <div className="space-y-3">
               <a
-                href="https://github.com/manishdev20"
+                href="https://github.com/Rahul-carpenter"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="GitHub"
-                className="flex items-center gap-2 hover:text-blue-500 cursor-pointer"
+                className="flex items-center gap-2 hover:text-blue-400"
               >
-                <span>
-                  <FaGithub />
-                </span>
+                <FaGithub />
                 <span>GitHub</span>
               </a>
               <a
-                href="https://linkedin.com/in/ManishDev21"
+                href="https://linkedin.com/in/rahul-carpenter124"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="LinkedIn"
-                className="flex items-center gap-2 hover:text-blue-500 cursor-pointer"
+                className="flex items-center gap-2 hover:text-blue-400"
               >
-                <span>
-                  <FaLinkedin />
-                </span>
+                <FaLinkedin />
                 <span>LinkedIn</span>
               </a>
-              <a
-                href="https://twitter.com/manishdev21"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Twitter"
-                className="flex items-center gap-2 hover:text-blue-500 cursor-pointer"
-              >
-                <span>
-                  <FaTwitter />
-                </span>
-                <span>Twitter</span>
-              </a>
             </div>
           </div>
+
+          {/* Progress Section */}
           <div className="bg-black text-white rounded-2xl p-6 flex flex-col items-center justify-center">
-            <h3 className="text-xl mb-4">1 Million Journey</h3>
-            <div className="flex gap-2 mb-4">
-              <div className="w-4 h-4 rounded-full bg-purple-500"></div>
-              <div className="w-4 h-4 rounded-full bg-blue-500"></div>
-              <div className="w-4 h-4 rounded-full bg-yellow-500"></div>
-              <div className="w-4 h-4 rounded-full bg-pink-500"></div>
-            </div>
+            <h3 className="text-xl font-semibold mb-2">Learning Journey</h3>
+            <p className="mb-3 text-sm text-gray-300">
+              {days}+ Days of Continuous Learning 🚀
+            </p>
             <Link
-              to={"/progress-dashbord"}
-              className="bg-white text-black px-4 py-1 rounded-full text-sm"
+              to="/progress-dashbord"
+              className="bg-white text-black px-4 py-2 rounded-full text-sm hover:bg-gray-200 transition"
             >
-              Check Progress ➚
+              View Progress ➚
             </Link>
           </div>
+
+          {/* Skills Section */}
           <div className="bg-black text-white rounded-2xl p-6">
-            <h3 className="text-xl mb-4">Skills</h3>
+            <h3 className="text-xl font-semibold mb-4">Skills</h3>
             <div className="space-y-3">
               <div className="flex items-center gap-2">
-                <Globe2 size={18} />
-                <span>Web development</span>
+                <Code2 size={18} />
+                <span>Python, Flask, Streamlit</span>
               </div>
               <div className="flex items-center gap-2">
-                <Globe2 size={18} />
-                <span>Web Design</span>
+                <Server size={18} />
+                <span>Docker, Kubernetes, Jenkins</span>
               </div>
               <div className="flex items-center gap-2">
-                <PenTool size={18} />
-                <span>Logo Design</span>
+                <BrainCircuit size={18} />
+                <span>AWS, Terraform, Ansible</span>
               </div>
             </div>
           </div>

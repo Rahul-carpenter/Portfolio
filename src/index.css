@@ -2,11 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* font-family: "Montserrat", sans-serif; */
-/* font-family: "Poppins", sans-serif; */
-/* font-family: "Lavishly Yours", cursive; */
-/* Globel CSS */
-
+/* Global Font Setup */
 * {
   margin: 0;
   padding: 0;
@@ -15,36 +11,40 @@
   scroll-behavior: smooth;
 }
 
+/* Autofill Fix for Input Fields */
 input:-webkit-autofill {
   box-shadow: 0 0 0px 1000px transparent inset !important;
   background-color: transparent !important;
   -webkit-text-fill-color: inherit !important;
 }
 
+/* Logo Typography */
 .Logo {
   font-family: "Lavishly Yours", cursive;
   user-select: none;
 }
+
+/* Section Headings */
 #aboutH,
 #skillH,
 #projectH,
-#blogH,
 #contactH {
   font-family: "Poppins", sans-serif;
-  border: 2px slolid white;
-
+  border: 2px solid white;
   transition-duration: 1s;
 }
+
 .secHead {
   transform-origin: left;
 }
-/*  */
 
+/* Button / Call to Action Fonts */
 .byCoffee,
 .hireMe {
   font-family: "Montserrat", sans-serif;
 }
 
+/* Hide Unused Service Radio Buttons */
 .radio-service {
-  opacity: 0% !important ;
+  opacity: 0 !important;
 }

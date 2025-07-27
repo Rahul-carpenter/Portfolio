@@ -5,14 +5,8 @@ import { SiWhatsapp } from "react-icons/si";
 const ContactForm = () => {
   const [checked, setChecked] = useState("");
   const handleChecked = (e) => {
-    if (e.target.checked) {
-      setChecked(e.target.value);
-    } else {
-      setChecked("");
-    }
+    setChecked(e.target.value);
   };
-
-  // Mobile number input handling
 
   const [selectedCountryCode, setSelectedCountryCode] = useState("+91");
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -24,159 +18,134 @@ const ContactForm = () => {
     { code: "+61", label: "AUS" },
   ];
 
-  const handleCountryCodeChange = (e) => {
-    setSelectedCountryCode(e.target.value);
-  };
-
-  const handlePhoneNumberChange = (e) => {
-    setPhoneNumber(e.target.value);
-  };
-
-  // Form submission handling
-
   return (
-    <div className="form-container w-full min-h-screen bg-[#000]">
-      <div className="w-full h-full sm:w-[80%]  py-5 sm:py-10 md:py-10  mx-auto lg:flex gap-10 px-5  ">
-        <div className="sidebar w-full  lg:w-[40%] py-5 md:py-10  text-white sm:text-lg">
-          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold">
-            Let's Work Together
-          </h1>
-          <h1 className="my-5 md:my-10 text-4xl sm:text-5xl md:text-6xl font-extrabold text-[#36daff]">
-            You Think, I Build!
-          </h1>
-          <p className="my-5 sm:my-10">
-            Have some big idea or brand website to develop and need help? Then
-            reach out I'd love to hear about your project and provide help as
-            soon as possible.
+    <div className="form-container w-full min-h-screen bg-black">
+      <div className="w-full sm:w-[80%] mx-auto py-10 px-5 lg:flex gap-10 text-white">
+        {/* Left Sidebar */}
+        <div className="lg:w-[40%]">
+          <h1 className="text-3xl lg:text-4xl font-bold">Let's Work Together</h1>
+          <h2 className="my-6 text-5xl font-extrabold text-[#36daff]">You Think, I Build!</h2>
+          <p className="text-gray-300">
+            Got a big idea or a project in mind? Let's connect! I'd love to hear
+            what you're planning and how I can help.
           </p>
-          <div className="my-5 flex  gap-5  md:my-20 w-max">
+          <div className="my-10 flex gap-5">
             <a
-              href="mailto:manishdev2k02@gmail.com"
-              className="flex items-center gap-2 sm:gap-5 hover:text-[blue] italic"
+              href="mailto:rj.yourmail@example.com"
+              className="flex items-center gap-3 hover:text-blue-400"
             >
-              <span className=" p-2 bg-blue-400 rounded-full">
-                <CiMail className="text-xl sm:text-2xl md:text-3xl " />
+              <span className="p-2 bg-blue-400 rounded-full">
+                <CiMail className="text-2xl" />
               </span>
             </a>
             <a
-              href={`
-              https://wa.me/7357723361?text=Hello_Manish`}
-              className="flex items-center gap-2 sm:gap-5 hover:text-[green] italic"
+              href="https://wa.me/917357723361?text=Hey%20Rj%2C%20I%20found%20your%20portfolio%20and%20would%20love%20to%20connect!"
+              className="flex items-center gap-3 hover:text-green-400"
             >
-              <span className=" p-2 bg-green-400 rounded-full">
-                <SiWhatsapp className="text-xl sm:text-2xl md:text-3xl " />
+              <span className="p-2 bg-green-400 rounded-full">
+                <SiWhatsapp className="text-2xl" />
               </span>
             </a>
           </div>
         </div>
-        <div className="formContainer w-full lg:w-[60%]  rounded-xl bg-[white] py-5 border-t-[10px] border-blue-500 p-5">
-          {/* Contact form */}
+
+        {/* Right Form */}
+        <div className="lg:w-[60%] bg-white rounded-xl p-5 border-t-[10px] border-blue-500 text-black">
           <form action="https://formspree.io/f/xbljkjjo" method="POST">
-            <header className="text-3xl font-semibold text-center my-5">
-              Contact me
-            </header>
-            <h3 className="">You need help with: </h3>
-            <div className="sm:flex gap-2 py-2">
-              <div className="my-5 sm:my-0">
-                <label
-                  htmlFor="webDevelopment"
-                  className={`service-btn ${
-                    checked === "website-development"
-                      ? "bg-[#c422f5] text-white"
-                      : ""
-                  } px-2 py-1 border-2 rounded-md border-[#c422f5] cursor-pointer `}
-                >
-                  Website Development
-                </label>
+            <h2 className="text-3xl font-semibold text-center mb-6">Contact Me</h2>
+
+            <h3 className="mb-2">You need help with:</h3>
+            <div className="flex gap-4 mb-4 flex-wrap">
+              <label
+                htmlFor="webDevelopment"
+                className={`px-3 py-1 border-2 rounded-md cursor-pointer ${
+                  checked === "website-development"
+                    ? "bg-[#c422f5] text-white border-[#c422f5]"
+                    : "border-[#c422f5]"
+                }`}
+              >
                 <input
-                  className="radio-service"
-                  onClick={(e) => handleChecked(e)}
                   type="radio"
-                  name="services"
                   id="webDevelopment"
-                  value={"website-development"}
-                  required
-                />
-              </div>
-              <div className="my-5 sm:my-0">
-                <label
-                  htmlFor="webDesign"
-                  className={`service-btn ${
-                    checked === "website-design"
-                      ? "bg-[#c422f5] text-white"
-                      : ""
-                  } px-2 py-1 border-2 rounded-md border-[#c422f5] cursor-pointer `}
-                >
-                  Website Design
-                </label>
-                <input
-                  className="radio-service"
-                  onClick={(e) => handleChecked(e)}
-                  type="radio"
                   name="services"
-                  id="webDesign"
-                  value={"website-design"}
-                  required
+                  value="website-development"
+                  onChange={handleChecked}
+                  className="hidden"
                 />
-              </div>
-            </div>
-            <div className="my-4 flex flex-col gap-2">
-              <input
-                required
-                type="text"
-                name="name"
-                id="name"
-                placeholder="Enter your name"
-                className="px-2 py-1 rounded  focus:outline-none border-2 border-gray-500"
-              />
-            </div>
-            <div className="my-4 flex flex-col gap-2">
-              <input
-                required
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Enter your email"
-                className="px-2 py-1 rounded  focus:outline-none border-2 border-gray-500"
-              />
+                Website Development
+              </label>
+
+              <label
+                htmlFor="webDesign"
+                className={`px-3 py-1 border-2 rounded-md cursor-pointer ${
+                  checked === "website-design"
+                    ? "bg-[#c422f5] text-white border-[#c422f5]"
+                    : "border-[#c422f5]"
+                }`}
+              >
+                <input
+                  type="radio"
+                  id="webDesign"
+                  name="services"
+                  value="website-design"
+                  onChange={handleChecked}
+                  className="hidden"
+                />
+                Website Design
+              </label>
             </div>
 
-            <div className="flex items-center my-4 bg-white rounded border-2 border-gray-500">
+            <input
+              type="text"
+              name="name"
+              placeholder="Enter your name"
+              required
+              className="w-full px-3 py-2 mb-4 border-2 border-gray-400 rounded focus:outline-none"
+            />
+
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+              className="w-full px-3 py-2 mb-4 border-2 border-gray-400 rounded focus:outline-none"
+            />
+
+            <div className="flex mb-4 gap-2">
               <select
                 value={selectedCountryCode}
-                onChange={handleCountryCodeChange}
-                className="w-max focus:outline-none outline-none rounded appearance-none p-2 "
+                onChange={(e) => setSelectedCountryCode(e.target.value)}
+                className="p-2 border-2 border-gray-400 rounded focus:outline-none"
               >
-                {countryCodes.map((country) => (
-                  <option key={country.code} value={country.code}>
-                    {country.label} ({country.code})
+                {countryCodes.map((c) => (
+                  <option key={c.code} value={c.code}>
+                    {c.label} ({c.code})
                   </option>
                 ))}
               </select>
               <input
                 type="tel"
-                value={phoneNumber}
                 name="Mobile"
-                onChange={handlePhoneNumberChange}
-                maxLength={10}
-                placeholder="Enter phone number"
-                className="w-full focus:outline-none outline-none px-2 "
+                maxLength="10"
+                value={phoneNumber}
+                onChange={(e) => setPhoneNumber(e.target.value)}
+                placeholder="Phone number"
+                className="flex-1 px-3 py-2 border-2 border-gray-400 rounded focus:outline-none"
               />
             </div>
-            <div className="my-5 flex flex-col gap-2">
-              <textarea
-                required
-                placeholder="briefly describe your project, idea and requirements..."
-                name="message"
-                id="message"
-                className="w-full min-h-32 px-2 py-1 rounded focus:outline-none border-2 border-gray-500"
-              />
-            </div>
+
+            <textarea
+              name="message"
+              required
+              placeholder="Briefly describe your project or idea..."
+              className="w-full min-h-[120px] px-3 py-2 mb-4 border-2 border-gray-400 rounded focus:outline-none"
+            />
+
             <button
               type="submit"
-              className="px-3 py-1 rounded-xl bg-[#a125c6] hover:bg-[#7b1a98] text-white"
+              className="w-full py-2 bg-[#a125c6] hover:bg-[#7b1a98] text-white rounded-xl"
             >
-              Send
+              Send Message
             </button>
           </form>
         </div>
