@@ -2,7 +2,7 @@ import React from "react";
 
 const Projects = () => {
   return (
-    <section className="py-12 px-4 md:px-12 bg-gray-100">
+    <section id="projects" className="py-12 px-4 md:px-12 bg-gray-100">
       <div className="max-w-5xl mx-auto">
         <h2 className="text-3xl font-bold mb-8 text-center text-blue-800">
           My Projects
@@ -14,7 +14,8 @@ const Projects = () => {
             📞 EduCall Manager
           </h3>
           <p className="text-gray-600 mb-2">
-            A lead management platform for educational agencies with role-based dashboards, lead uploads, and agent interactions.
+            A lead management platform for educational agencies with role-based
+            dashboards, lead uploads, and agent interactions.
           </p>
           <p className="text-sm text-red-500 mb-2">🔒 Private GitHub Repository</p>
           <div className="flex flex-wrap gap-4">
@@ -58,7 +59,8 @@ const Projects = () => {
             🎲 Lottery Probability Calculator
           </h3>
           <p className="text-gray-600 mb-2">
-            Developed using Python and Streamlit, this project simulates real-world lottery odds, ticket value analysis, and return simulations.
+            Developed using Python and Streamlit, this project simulates real-world
+            lottery odds, ticket value analysis, and return simulations.
           </p>
           <ul className="list-disc ml-6 text-gray-600 text-sm">
             <li>Single & Multi-ticket win probability</li>
@@ -94,7 +96,8 @@ const Projects = () => {
             🤖 Feature-Controlled Assistant
           </h3>
           <p className="text-gray-600 mb-2">
-            AI-powered assistant built using Python and AWS to control applications via voice, automate social tasks, and manage cloud resources.
+            AI-powered assistant built using Python and AWS to control applications via
+            voice, automate social tasks, and manage cloud resources.
           </p>
           <p className="text-gray-500 text-sm mb-2">
             Tech Stack: Python, AWS, OpenCV, Instabot
